@@ -1,6 +1,8 @@
 <?php
 session_start();
-include_once('inc/header.php');
+require('inc/pdo.php');
+require('function/function.php');
+include('inc/header.php');
 ?>
 
 <div id="contact">

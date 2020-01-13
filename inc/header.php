@@ -13,13 +13,17 @@
 </head>
 <body>
 <header>
-<img src="assets/img/image2vector.svg" class="logo">
+<a href="index.php"><img src="assets/img/image2vector.svg" class="logo"></a>
     <nav>
+
         <ul>
+
             <?php if (!isLogged()) { ?>
                 <li><a href="register.php">Inscriptions</a></li>
                 <li><a href="login.php">Connexion</a></li>
-
+                <li><a href="quisommesnous.php">Qui sommes Nous ?</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="contact.php">Contact</a></li>
 
 
             <?php }elseif(idAdmin()){?>
