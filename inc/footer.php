@@ -6,7 +6,10 @@
 </div>
 <footer>
     <p>Nfactory-2019</p>
-
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assetsAdmin/js/bootstrap.min.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assetsAdmin/js/custom.js"></script>
 </footer>
 </body>
 </html>
