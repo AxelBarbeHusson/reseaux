@@ -12,7 +12,7 @@
 </head>
 <body>
 <header>
-    <a href="index.php"><img src="asset/img/thelogo.png" alt="Logo du site MoovieProject : Faite partie du cinéma"></a>
+
     <nav>
         <ul>
             <?php if (!isLogged()) { ?>
