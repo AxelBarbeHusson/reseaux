@@ -25,8 +25,8 @@
             <?php }elseif(idAdmin()){?>
                 <li><a href="logout.php">Deconnexion</a></li>
                 <li><a href="admin.php">Pannel admin</a></li>
+                <li class="bienvenue">Bonjour <?php echo $_SESSION['login']['pseudo'] ?> !</li>
 
-                <
            <?php }  else { ?>
                 <div class="head2">
             <li><a href="logout.php">Deconnexion</a></li>
