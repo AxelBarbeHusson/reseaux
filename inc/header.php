@@ -24,13 +24,12 @@
             <?php }elseif(idAdmin()){?>
                 <li><a href="logout.php">Deconnexion</a></li>
                 <li><a href="admin.php">Pannel admin</a></li>
-                <li><a href="aVoir.php">Films à voir</a></li>
-                <li><a href="favUsers.php">Films notés</a></li>
+
+                <
            <?php }  else { ?>
                 <div class="head2">
             <li><a href="logout.php">Deconnexion</a></li>
-            <li><a href="aVoir.php">Films à voir</a></li>
-            <li><a href="favUsers.php">Films notés</a></li>
+
                 </div>
 
             <li class="bienvenue">Bonjour <?php echo $_SESSION['login']['pseudo'] ?> !</li>
