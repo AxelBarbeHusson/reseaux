@@ -16,7 +16,7 @@ require ('inc/header.php')
         <button class="services">Nos services</button>
         <button class="Contact">Nous contacter</button>
     </div>
-    <img src="">
+    <img src="https://picsum.photos/id/1/200/300">
 
 </section>
 
@@ -24,21 +24,21 @@ require ('inc/header.php')
 
 <section id="choose_home">
     <div class="element_1">
-        <img src="">
-        <h3></h3>
-        <p></p>
+        <img src="https://picsum.photos/id/1/50/50">
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi odit officia repudiandae tempora voluptatum?</p>
     </div>
 
     <div class="element_2">
-        <img src="">
-        <h3></h3>
-        <p></p>
+        <img src="https://picsum.photos/id/1/50/50">
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi odit officia repudiandae tempora voluptatum?</p>
     </div>
 
     <div class="element_3">
-        <img src="">
-        <h3></h3>
-        <p></p>
+        <img src="https://picsum.photos/id/1/50/50">
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi odit officia repudiandae tempora voluptatum?</p>
     </div>
 </section>
 
@@ -67,3 +67,7 @@ require ('inc/header.php')
 </section>
 </div>
 </body>
+
+
+<?php
+require ('inc/footer.php');

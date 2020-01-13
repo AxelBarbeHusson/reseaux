@@ -1,1 +1,18 @@
 @import "reset.css";
+
+.wrap {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*/ HOME /*/
+#presentation_home{
+    background-color: blue;
+}
+#presentation_home h2 {
+    font-size: 50px;
+}
+#presentation_home img{
+    float: right;
+}
