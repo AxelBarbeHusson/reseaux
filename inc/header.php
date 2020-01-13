@@ -7,7 +7,7 @@
         } else {
             echo '';
         } ?></title>
-    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body>
