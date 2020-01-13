@@ -11,7 +11,7 @@ require ('inc/header.php')
 <div class="wrap">
 <section id="presentation_home">
     <div class="text_home_1">
-        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, similique?</p>
         <button class="services">Nos services</button>
         <button class="Contact">Nous contacter</button>
