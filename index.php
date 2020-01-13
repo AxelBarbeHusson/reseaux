@@ -10,36 +10,38 @@ require ('inc/header.php')
 <body>
 <div class="wrap">
 <section id="presentation_home">
-    <div class="text_home_1">
+    <div class="home1">
         <h2>Lorem ipsum dolor sit.</h2>
+        <br>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, similique?</p>
-        <button class="services">Nos services</button>
-        <button class="contact"><a href="contact.php">Nous contacter</a></button>
+        <br>
+        <button class="services" href="services.php">Nos services</button>
+        <button class="contact" href="contact.php">Nous contacter</button>
     </div>
-    <img src="https://picsum.photos/id/1/200/300">
+    <div class="home2">
+
+        <img src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-slider-cloud.png" alt="illustration processeur">
+    </div>
+
 
 </section>
 
-<div class="clear"></div>
 
 <section id="choose_home">
+    <h2>Pourquoi nous ?</h2>
+    <div class="bar"></div>
     <div class="element_1">
-        <img src="https://picsum.photos/id/1/50/50">
-        <h3>Lorem ipsum dolor sit amet.</h3>
+        <img src="assets/img/guarantee.svg">
+        <h3>Garanti</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi odit officia repudiandae tempora voluptatum?</p>
     </div>
 
     <div class="element_2">
-        <img src="https://picsum.photos/id/1/50/50">
-        <h3>Lorem ipsum dolor sit amet.</h3>
+        <img src="assets/img/password.svg">
+        <h3>Sécurisé</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi odit officia repudiandae tempora voluptatum?</p>
     </div>
 
-    <div class="element_3">
-        <img src="https://picsum.photos/id/1/50/50">
-        <h3>Lorem ipsum dolor sit amet.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi odit officia repudiandae tempora voluptatum?</p>
-    </div>
 </section>
 
 <div class="clear"></div>
