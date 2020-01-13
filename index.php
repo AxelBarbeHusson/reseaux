@@ -67,3 +67,5 @@ require ('inc/header.php')
 </section>
 </div>
 </body>
+<?php
+include ('inc/footer.php');
