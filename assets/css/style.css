@@ -8,10 +8,19 @@
 
 /*/ HOME /*/
 #presentation_home{
-    background-color: blue;
+    background-color: #283D7E;
+    color: white;
+}
+#presentation_home .text_home_1 {
+
 }
 #presentation_home h2 {
     font-size: 50px;
+    display: block;
+
+}
+#presentation_home p {
+    display: block;
 }
 #presentation_home img{
     float: right;

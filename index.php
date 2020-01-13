@@ -14,7 +14,7 @@ require ('inc/header.php')
         <h2>Lorem ipsum dolor sit.</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, similique?</p>
         <button class="services">Nos services</button>
-        <button class="Contact">Nous contacter</button>
+        <button class="contact"><a href="contact.php">Nous contacter</a></button>
     </div>
     <img src="https://picsum.photos/id/1/200/300">
 
