@@ -8,11 +8,12 @@
             echo '';
         } ?></title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
 </head>
 <body>
 <header>
-
+<img src="assets/img/image2vector.svg" class="logo">
     <nav>
         <ul>
             <?php if (!isLogged()) { ?>

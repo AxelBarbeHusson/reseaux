@@ -4,24 +4,72 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*/ HOME /*/
 #presentation_home{
-    background-color: #283D7E;
     color: white;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to bottom right, #0e0838, #371377);
 }
-#presentation_home .text_home_1 {
-
+#presentation_home .home1{
+    float: left;
+    width: 45%;
+    margin-top: 100px;
+    margin-left: 2%;
+}
+#presentation_home .home2{
+    float: right;
+    width: 45%;
+    height: 400px;
 }
 #presentation_home h2 {
     font-size: 50px;
-    display: block;
-
 }
 #presentation_home p {
-    display: block;
+    font-size: 20px;
+    width: 100%;
 }
 #presentation_home img{
-    float: right;
+    height: 400px;
+    width: 500px;
+    border-color: rgb(255, 255, 255);
+}
+#presentation_home button{
+    padding: 15px 15px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 30px;
+    background-color: #5FC6DA;
+    transform-origin: 50% 50% 0px;
+}
+#presentation_home button:hover{
+    transition: 0.5s;
+    background-color: #8CF0FF;
+}
+#presentation_home .services {
+margin-left: 5%;
+}
+#presentation_home .contact {
+    margin-left: 10%;
+}
+
+#choose_home {
+    background: linear-gradient(to bottom left, #371377,#0e0838);
+    padding-top: 50px;
+    color: white;
+    width: 100%;
+}
+#choose_home h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+
+/*/ HEADER /*/
+.logo {
+    width: 200px;
+    height: 80px;
 }
