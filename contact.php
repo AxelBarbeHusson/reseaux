@@ -14,41 +14,35 @@ include('inc/header.php');
     <div id="formulaire">
 
     </div>
-    <div id="questions">
-        <div id="Q1">
-            <button class="dropbtn">Lorem ipsum dolor sit?
-                <i class="plus">+</i>
-            </button>
-            <div id="q2_ans">
-                <a id="answer">Lorem Lorem Lorem Lorem !</a>
-            </div>
+    <div id="accordion">
+        <h3><span>Q1- </span>Lorem ipsum dolor sit amet?</h3>
+        <div id="questions">
+            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
         </div>
-        <div id="Q2">
-            <button class="dropbtn">Lazare et dolor aetum quad?
-                <i class="plus">+</i>
-            </button>
-            <div id="q2_ans">
-                <a id="answer">Consectetur adipiscing elit. Sed augue !</a>
-            </div>
+        <h3><span>Q2- </span>Donec vestibulum justo a diam?</h3>
+        <div id="questions">
+            <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac
+                turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
         </div>
-        <div id="Q3">
-            <button class="dropbtn">Fusce cursus placerat mauris?
-                <i class="plus">+</i>
-            </button>
-            <div id="q3_ans">
-                <a id="answer">Cras at velit posuere, fringilla orci vel!</a>
-            </div>
+        <h3><span>Q3- </span>Quisque lorem tortor fringilla sed, vestibulum?</h3>
+        <div id="questions">
+            <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac
+                turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
         </div>
-        <div id="Q4">
-            <button class="dropbtn">In varius rutrum metus dictumst?
-                <i class="plus">+</i>
-            </button>
-            <div id="q4_ans">
-                <a id="answer">Vestibulum accumsan, nulla in iaculis ullamcorper.</a>
-            </div>
+        <h3><span>Q4- </span>Vestibulum dapibus, mauris nec malesuada?</h3>
+        <div id="questions">
+            <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac
+                turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
         </div>
+        <h3><span>Q5- </span>Nulla ipsum dolor lacus, suscipit adipiscing?</h3>
+        <div id="questions">
+            <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac
+                turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
+        </div>
+
     </div>
-
-
 <?php
 include_once('inc/footer.php');
