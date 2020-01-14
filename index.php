@@ -20,8 +20,8 @@ require ('inc/header.php')
 
         <img src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-slider-cloud.png" alt="illustration processeur">
     </div>
-    <button class="services">Nos services</button>
-    <button class="contact">Nous contacter</button>
+    <a href="services.php"><button class="services">Nos services</button></a>
+    <a href="contact.php"><button  class="contact">Nous contacter</button></a>
 
 
 </section>
