@@ -7,57 +7,23 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/*/ HEADER /*/
-header{
-    font-family: 'Roboto', sans-serif;
-}
-nav {
-    width: 100%;
-    background-color: #0C0C3C;
-    overflow: auto;
-    position: fixed;
-    z-index: 1;
-}
-nav a .logo {
-    float: left;
-    width: 20%;
-    height: auto;
-}
-nav li a {
-    float: right;
-    text-align: center;
-    color:#5FC6DA;
-    margin-right: 10px;
-    text-decoration: none;
-    font-size: 1.4vw;
-    width: 10%;
-    vertical-align: middle;
-    margin-top: 3%;
-}
-nav li a:hover{
-    transition: 0.5s;
-    color: #8CF0FF;
-}
-
 /*/ HOME /*/
 #presentation_home{
     color: white;
     width: 100%;
     height: 400px;
     background: linear-gradient(to bottom right, #0e0838, #371377);
-    padding-top: 100px;
 }
 #presentation_home .home1{
     float: left;
     width: 45%;
     margin-top: 100px;
     margin-left: 2%;
-    margin-bottom: 20px;
 }
 #presentation_home .home2{
     float: right;
     width: 45%;
-    margin-right: 2%;
+    height: 400px;
 }
 #presentation_home h2 {
     font-size: 50px;
@@ -67,41 +33,40 @@ nav li a:hover{
     width: 100%;
 }
 #presentation_home img{
-    padding-top: 80px;
-    width: 100%;
+    height: 400px;
+    width: 500px;
+    border-color: rgb(255, 255, 255);
 }
 #presentation_home button{
     padding: 15px 15px;
     border-radius: 12px;
     border: none;
-    margin-top: 10px;
+    margin-top: 30px;
     background-color: #5FC6DA;
-    float: left;
+    transform-origin: 50% 50% 0px;
 }
 #presentation_home button:hover{
     transition: 0.5s;
     background-color: #8CF0FF;
 }
 #presentation_home .services {
-    margin-left: 5%;
+margin-left: 5%;
 }
 #presentation_home .contact {
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 
 #choose_home {
     background: linear-gradient(to bottom left, #371377,#0e0838);
-    padding-top: 110px;
+    padding-top: 50px;
     color: white;
     width: 100%;
-    height: 550px;
+    height: 400px;
 }
 #choose_home h2 {
     text-align: center;
     font-size: 50px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
 }
 #choose_home .bar {
     background-color: grey;
@@ -112,28 +77,12 @@ nav li a:hover{
     margin-bottom: 20px;
 }
 #choose_home .element_1 {
-    border-radius: 25%;
-    width: 25%;
-    padding: 20px 0;
+    width: 50%;
     float: left;
-    margin-left: 15%;
-}
-#choose_home .element_1:hover {
-    transition: 0.4s;
-    background-color: #5FC6DA;
-    border-radius: 25%;
 }
 #choose_home .element_2 {
-    border-radius: 25%;
-    padding: 20px 0;
-    width: 25%;
-    float: right;
-    margin-right: 15%;
-}
-#choose_home .element_2:hover {
-    transition: 0.2s;
-    background-color: #5FC6DA;
-    border-radius: 25%;
+    width: 50%;
+    float: left;
 }
 #choose_home img {
     width: 60px;
@@ -142,10 +91,6 @@ nav li a:hover{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
-
-}
-#choose_home img :hover {
-    color: black
 }
 #choose_home h3 {
     text-align: center;
@@ -158,75 +103,9 @@ nav li a:hover{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    width: 70%;
+    width: 50%;
 }
 
-
-#service_home{
-    padding-top: 50px;
-    color: #0e0838;
-    position: relative;
-}
-#service_home h2{
-    text-align: center;
-    font-size: 50px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-#service_home .free{
-    width: 100%;
-}
-#service_home .subscribe{
-    width: 100%;
-}
-#service_home .imgfree {
-    width: 200px;
-    float: right;
-    margin-right: 20%;
-}
-#service_home .imgsub{
-    width: 200px;
-    float: left;
-    margin-left: 20%;
-}
-#service_home .text2 {
-    position: absolute;
-    float: left;
-    width: 40%;
-    margin-left: 10%;
-    margin-top: 80px;
-
-}
-#service_home .text3 {
-    position: absolute;
-    float: right;
-    width: 40%;
-    margin-left: 50%;
-}
-#service_home h3 {
-    font-size: 20px;
-    letter-spacing: 4px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-#service_home p{
-    margin-bottom: 10px;
-}
-#service_home li{
-    margin-bottom: 5px;
-    font-style: italic;
-
-}
-#service_home i {
-    color: #4cae4c;
-    margin-right: 5px;
-}
-#service_home .subscribe{
-    padding-top: 100px;
-}
-#service_home a {
-    color: #0e0838;
-}
 
 /*/ HEADER /*/
 .logo {
@@ -297,17 +176,26 @@ nav li a:hover{
     width: 300px;
     margin-left: 30px;
 }
-table {
-    border: 1px #000 solid;
+#Serveur {
+    background-color: #2a0e62;
 }
 
-td, th {
-    border: 1px #000 dotted;
-    padding: 5px 10px;
+#serv {
+    float: left;
+    height: 600px;
+    width: 730px;
 }
 
-thead td {
-    background-color: #000;
-    color: #FFF;
-    font-weight: bold;
+#axel {
+    float: right;
+    border-radius: 50%;
+    margin-right: 200px;
+    margin-top: 50px;
+
+}
+#blabla3 {
+    float: right;
+    margin-right: 210px;
+    margin-top: 20px;
+    color: #fff;
 }
