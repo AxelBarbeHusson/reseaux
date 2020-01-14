@@ -9,6 +9,7 @@
         } ?></title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen and (max-width: 700px)" href="style.css" type="text/css" />
 
 </head>
 <body>
@@ -32,12 +33,11 @@
                 <li class="bienvenue">Bonjour <?php echo $_SESSION['login']['pseudo'] ?> !</li>
 
            <?php }  else { ?>
-                <div class="head2">
+                    <a href="index.php"><img src="assets/img/image2vector.svg" class="logo"></a>
             <li><a href="logout.php">Deconnexion</a></li>
-
-                </div>
-
-            <li class="bienvenue">Bonjour <?php echo $_SESSION['login']['pseudo'] ?> !</li>
+                    <li><a href="quisommesnous.php">Qui sommes nous ?</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="contact.php">Contact</a></li>
             <?php }?>
         </ul>
     </nav>
