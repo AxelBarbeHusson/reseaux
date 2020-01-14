@@ -48,6 +48,8 @@ require ('inc/header.php')
 
 <section id="service_home">
     <h2>Nos services</h2>
+    <?php if (isLogged()) {?>
+    <a href="services.php">
         <div class="text2">
         <h3>Service gratuit</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorem exercitationem iure laboriosam minima, neque reiciendis vitae. Eligendi, esse, maxime.</p>
@@ -58,8 +60,24 @@ require ('inc/header.php')
         </ul>
         </div>
         <img class="imgfree" src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-home-image-11.png">
+    </a> <?php } else { ?>
+        <a href="login.php">
+            <div class="text2">
+                <h3>Service gratuit</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorem exercitationem iure laboriosam minima, neque reiciendis vitae. Eligendi, esse, maxime.</p>
+                <ul>
+                    <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
+                    <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
+                    <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
+                </ul>
+            </div>
+            <img class="imgfree" src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-home-image-11.png">
+        </a>
+    <?php }?>
 <div class="clear"></div>
     <div class="subscribe">
+<?php if (isLogged()) {?>
+        <a href="services.php">
         <div class="text3">
         <h3>Service payant</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorem exercitationem iure laboriosam minima, neque reiciendis vitae. Eligendi, esse, maxime.</p>
@@ -70,6 +88,21 @@ require ('inc/header.php')
         </ul>
         </div>
         <img class="imgsub" src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-home-image-22.png">
+        </a>
+<?php } else { ?>
+    <a href="login.php">
+        <div class="text3">
+            <h3>Service payant</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorem exercitationem iure laboriosam minima, neque reiciendis vitae. Eligendi, esse, maxime.</p>
+            <ul>
+                <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
+                <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
+                <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
+            </ul>
+        </div>
+        <img class="imgsub" src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-home-image-22.png">
+    </a>
+<?php }?>
     </div>
 </section>
     <div class="clear"></div>
