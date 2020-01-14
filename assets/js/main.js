@@ -34,4 +34,7 @@ var myChart = new Chart(ctx, {
             }]
         }
     }
-});
+})
+$( function() {
+    $( "#accordion" ).accordion();
+} );
