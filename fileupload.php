@@ -3,6 +3,7 @@ session_start();
 require('inc/pdo.php');
 require('function/function.php');
 include('inc/header.php');
+if (isLogged()){
 $nomOrigine = $_FILES['monfichier']['name'];
 $elementsChemin = pathinfo($nomOrigine);
 $extensionFichier = $elementsChemin['extension'];
@@ -96,5 +97,7 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
             " vérifiez l'existence du répertoire " . $repertoireDestination;
     }
 }
-
+}else{
+    echo '<p>403</p>';
+}
 include('inc/footer.php');
