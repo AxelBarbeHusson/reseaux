@@ -33,6 +33,8 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
         <th>eth.src</th>
         <th>eth.dst</th>
         <th>http.host</th>
+        <th>UDP</th>
+        <th>TCP</th>
     </tr>
     </thead>
     <tbody>
@@ -55,10 +57,28 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
             echo '<td>' . $json[$i]['_source']['layers']['eth']['eth.src'] . '</td>';
             echo '<td>' . $json[$i]['_source']['layers']['eth']['eth.dst'] . '</td>';
         }
+
         if (isset($row['ssdp'])) {
-            echo '<td>SSDP</td>';
+            //echo '<td>SSDP</td>';
             echo '<td>' . $json[$i]['_source']['layers']['ssdp']['http.host'] . '</td>';
 
+        }else{
+            echo '<td></td>';
+        }
+
+        if (isset($row['udp'])) {
+            //echo '<td>UDP</td>';
+            echo '<td>' . $json[$i]['_source']['layers']['udp']['udp.srcport'] . '</td>';
+            echo '<td>' . $json[$i]['_source']['layers']['udp']['udp.dstport'] . '</td>';
+        }else{
+            echo '<td></td>';
+        }
+        if (isset($row['tcp'])) {
+            //echo '<td>TCP</td>';
+            echo '<td>' . $json[$i]['_source']['layers']['tcp']['tcp.srcport'] . '</td>';
+            echo '<td>' . $json[$i]['_source']['layers']['tcp']['tcp.dstport'] . '</td>';
+        }else{
+            echo '<td></td>';
         }
 
         echo '</tr>';
