@@ -7,6 +7,21 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/*/ HEADER /*/
+nav {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+nav a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
 /*/ HOME /*/
 #presentation_home{
     color: white;
