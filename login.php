@@ -37,6 +37,8 @@ if (!empty($_POST['submitted'])) {
             $errors['login'] = 'Pseudo or Email inconnu';
         }
     }
+    header('Location: index.php');
+
 }
 include('inc/header.php');
 ?>

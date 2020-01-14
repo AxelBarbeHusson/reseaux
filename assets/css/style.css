@@ -297,3 +297,17 @@ nav li a:hover{
     width: 300px;
     margin-left: 30px;
 }
+table {
+    border: 1px #000 solid;
+}
+
+td, th {
+    border: 1px #000 dotted;
+    padding: 5px 10px;
+}
+
+thead td {
+    background-color: #000;
+    color: #FFF;
+    font-weight: bold;
+}

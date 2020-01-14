@@ -60,7 +60,7 @@ require ('inc/header.php')
         </ul>
         </div>
         <img class="imgfree" src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-home-image-11.png">
-    </a> <?php } else { ?>
+    </a> <?php } else  { ?>
         <a href="login.php">
             <div class="text2">
                 <h3>Service gratuit</h3>
@@ -73,10 +73,10 @@ require ('inc/header.php')
             </div>
             <img class="imgfree" src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-home-image-11.png">
         </a>
-    <?php }?>
+    <?php } ?>
 <div class="clear"></div>
     <div class="subscribe">
-<?php if (isLogged()) {?>
+<?php if (idAdmin()) {?>
         <a href="services.php">
         <div class="text3">
         <h3>Service payant</h3>
