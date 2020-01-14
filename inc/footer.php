@@ -12,6 +12,8 @@
     <script src="assetsAdmin/js/bootstrap.min.js"></script>
     <!-- CUSTOM SCRIPTS -->
     <script src="assetsAdmin/js/custom.js"></script>
+    <!-- IMAGE LI -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </footer>
 </body>
 </html>

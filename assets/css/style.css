@@ -7,6 +7,21 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/*/ HEADER /*/
+nav {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+nav a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
 /*/ HOME /*/
 #presentation_home{
     color: white;
@@ -19,11 +34,11 @@
     width: 45%;
     margin-top: 100px;
     margin-left: 2%;
+    margin-bottom: 20px;
 }
 #presentation_home .home2{
     float: right;
     width: 45%;
-    height: 400px;
     margin-right: 2%;
 }
 #presentation_home h2 {
@@ -34,24 +49,23 @@
     width: 100%;
 }
 #presentation_home img{
-    height: 400px;
-    width: 500px;
+    padding-top: 80px;
+    width: 100%;
 }
 #presentation_home button{
     padding: 15px 15px;
     border-radius: 12px;
     border: none;
-    margin-top: 30px;
+    margin-top: 10px;
     background-color: #5FC6DA;
-    transform-origin: 50% 50% 0px;
+    float: left;
 }
 #presentation_home button:hover{
     transition: 0.5s;
     background-color: #8CF0FF;
 }
 #presentation_home .services {
-margin-left: 5%;
-    margin-right: 10%;
+    margin-left: 5%;
 }
 #presentation_home .contact {
     margin-left: 5%;
@@ -143,23 +157,57 @@ margin-left: 5%;
 #service_home .free{
     width: 100%;
 }
+#service_home .subscribe{
+    width: 100%;
+}
 #service_home .imgfree {
-    height:20%;
-    width: 20%;
+    height:15%;
+    width: 15%;
     float: right;
     margin-right: 20%;
 }
 #service_home .imgsub{
-    height:20%;
-    width: 20%;
+    height:15%;
+    width: 15%;
     float: left;
+    margin-left: 20%;
 }
 #service_home .text2 {
     float: left;
     width: 30%;
     margin-left: 20%;
-}
+    margin-top: 80px;
 
+}
+#service_home .text3 {
+    float: right;
+    width: 30%;
+    margin-right:20%;
+}
+#service_home h3 {
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#service_home p{
+    margin-bottom: 10px;
+}
+#service_home li{
+    margin-bottom: 5px;
+    font-style: italic;
+
+}
+#service_home i {
+    color: #4cae4c;
+    margin-right: 5px;
+}
+#service_home .subscribe{
+    padding-top: 100px;
+}
+a {
+    color: #0e0838;
+}
 
 /*/ HEADER /*/
 .logo {
