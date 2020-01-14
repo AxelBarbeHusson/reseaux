@@ -26,12 +26,12 @@ require ('inc/header.php')
 
 </section>
 
-
 <section id="choose_home">
     <h2>Pourquoi nous ?</h2>
     <div class="bar"></div>
     <div class="element_1">
-        <img src="assets/img/guarantee.svg">
+        <img src="assets/img/guarantee.svg" >
+
         <h3>Garanti</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi odit officia repudiandae tempora voluptatum?</p>
     </div>
@@ -47,7 +47,9 @@ require ('inc/header.php')
 <div class="clear"></div>
 
 <section id="service_home">
+    <h2>Nos services</h2>
     <div class="free">
+        <div class="text2">
         <h3>Service gratuit</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorem exercitationem iure laboriosam minima, neque reiciendis vitae. Eligendi, esse, maxime.</p>
         <ul>
@@ -55,16 +57,19 @@ require ('inc/header.php')
             <li>Lorem ipsum dolor.</li>
             <li>Lorem ipsum dolor.</li>
         </ul>
+        </div>
+        <img class="imgfree" src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-home-image-11.png">
     </div>
-
+<div class="clear"></div>
     <div class="subscribe">
-        <h3>Service gratuit</h3>
+        <h3>Service payant</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorem exercitationem iure laboriosam minima, neque reiciendis vitae. Eligendi, esse, maxime.</p>
         <ul>
             <li>Lorem ipsum dolor.</li>
             <li>Lorem ipsum dolor.</li>
             <li>Lorem ipsum dolor.</li>
         </ul>
+        <img class="imgsub" src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-home-image-22.png">
     </div>
 </section>
 </div>
