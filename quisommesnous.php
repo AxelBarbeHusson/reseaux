@@ -7,7 +7,7 @@ require('inc/header.php')
 ?>
 
     <body>
-    <div id="groupe1"></div>
+    <div id="groupe1">
     <h1 id="qui">Qui sommes nous ?</h1>
     <img id="Bannieres" src="assets/css/img/Bannieres.jpg" alt="">
     <h2 id="titreblabla">Nous avons 60 ans d'experiences dans le dev et oui jamy</h2>
@@ -23,7 +23,7 @@ require('inc/header.php')
         sapiente suscipit tempore veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, architecto,
         deleniti, doloribus excepturi harum iste laudantium maiores maxime minima nihil numquam obcaecati possimus sunt
         suscipit tempore ut vel. Consequatur, ipsum?</p>
-
+    </div>
     <div class="wrap"></div>
 
     <div id="equipe">
@@ -37,8 +37,15 @@ require('inc/header.php')
         <img id="victor" src="assets/css/img/Victor.jfif" alt="">
 
     </div>
+    <img id="serv" src="assets/css/img/Serveur.jpeg" alt="">
+    <img id="axel" src="assets/css/img/axel.jfif" alt="">
+    <p id="blabla3">Axel chef de projet et plus beau de tout les rebeux</p>
+    <div id="Serveur"</div>
+    <div class="wrap"></div>
 
 
+
+    <div class="clear"></div>
     </body>
 
 <?php
