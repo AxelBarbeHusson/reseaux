@@ -12,6 +12,9 @@ include('inc/header.php');
         </h1>
     </div>
     <div id="formulaire">
+
+    </div>
+    <div id="questions">
         <div id="Q1">
             <button class="dropbtn">Lorem ipsum dolor sit?
                 <i class="plus"></i>
@@ -45,7 +48,6 @@ include('inc/header.php');
             </div>
         </div>
     </div>
-    <div id="questions"></div>
 
 
 <?php
