@@ -82,7 +82,7 @@ require ('inc/header.php')
         <h3>Service payant</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorem exercitationem iure laboriosam minima, neque reiciendis vitae. Eligendi, esse, maxime.</p>
         <ul>
-            <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
+            <li><i class='fas fa-caret-right'></i>Lorem dolor.</li>
             <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
             <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
         </ul>
