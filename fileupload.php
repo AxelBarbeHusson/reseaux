@@ -24,7 +24,48 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
         //debug($json);
 
         ?>
+<table>
+    <thead>
+    <tr>
+        <th>frame.time</th>
+        <th>ip.src</th>
+        <th>ip.dst</th>
+        <th>eth.src</th>
+        <th>eth.dst</th>
+        <th>http.host</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php
+    $nb = count($json);
+    for ($i = 0; $i < $nb; $i++) {
+        echo '<tr>';
+        $row = $json[$i]['_source']['layers'];
+        if (isset($row['frame'])){
+            echo '<td>' .$json[$i]['_source']['layers']['frame']['frame.time'] . '</td>';
+        }
+        if (isset($row['ip'])) {
+            echo '<td>' . $json[$i]['_source']['layers']['ip']['ip.src'] . '</td>';
+            echo '<td>' . $json[$i]['_source']['layers']['ip']['ip.dst'] . '</td>';
+        }else{
+            echo '<td></td>';
+            echo '<td></td>';
+        }
+        if (isset($row['eth'])) {
+            echo '<td>' . $json[$i]['_source']['layers']['eth']['eth.src'] . '</td>';
+            echo '<td>' . $json[$i]['_source']['layers']['eth']['eth.dst'] . '</td>';
+        }
+        if (isset($row['ssdp'])) {
+            echo '<td>SSDP</td>';
+            echo '<td>' . $json[$i]['_source']['layers']['ssdp']['http.host'] . '</td>';
 
+        }
+
+        echo '</tr>';
+    }
+    ?>
+    </tbody>
+</table>
 
         <?php
 
