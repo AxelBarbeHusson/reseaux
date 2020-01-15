@@ -23,8 +23,8 @@ require ('inc/header.php')
     <a href="services.php"><button class="services">Nos services</button></a>
     <a href="contact.php"><button  class="contact">Nous contacter</button></a>
 
-
 </section>
+
 
 <section id="choose_home">
     <h2>Pourquoi nous ?</h2>

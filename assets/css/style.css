@@ -4,6 +4,8 @@
     max-width: 1900px;
     width: 100%;
     margin: 0 auto;
+}
+body{
     font-family: 'Roboto', sans-serif;
 }
 .wrap2 {
@@ -12,14 +14,14 @@
     margin: 0 auto;
 }
 
+
 /*/ HEADER /*/
-header{
-    font-family: 'Roboto', sans-serif;
-}
+
 nav {
     width: 100%;
     background-color: #0C0C3C;
     overflow: auto;
+    position: fixed;
     z-index: 1;
 }
 nav a .logo {
@@ -96,10 +98,10 @@ nav li a:hover{
 
 #choose_home {
     background: linear-gradient(to bottom left, #371377,#0e0838);
-    padding-top: 110px;
+    padding-top: 250px;
     color: white;
     width: 100%;
-    height: 550px;
+    height: 700px;
 }
 #choose_home h2 {
     text-align: center;
@@ -169,7 +171,7 @@ nav li a:hover{
 #service_home{
     padding-top: 50px;
     color: #0e0838;
-    position: relative;
+
 }
 #service_home h2{
     text-align: center;
@@ -177,12 +179,7 @@ nav li a:hover{
     text-transform: uppercase;
     letter-spacing: 3px;
 }
-#service_home .free{
-    width: 100%;
-}
-#service_home .subscribe{
-    width: 100%;
-}
+
 #service_home .imgfree {
     width: 200px;
     float: right;
@@ -232,11 +229,9 @@ nav li a:hover{
     color: #0e0838;
 }
 
+
 /*/ HEADER /*/
-.logo {
-    width: 200px;
-    height: 80px;
-}
+
 
 /*/ Qui somme nous /*/
 
