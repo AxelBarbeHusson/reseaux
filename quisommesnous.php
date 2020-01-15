@@ -11,7 +11,7 @@ require('inc/header.php')
     <h1 id="qui">Qui sommes nous ?</h1>
     <img id="Bannieres" src="assets/img/Bannieretest.PNG" alt="">
     <h2 id="titreblabla">Nous avons 60 ans d'experiences dans le dev et oui jamy</h2>
-
+    <div class="gauche">
     <p id="blabla1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias, aspernatur atque culpa
         deserunt distinctio dolor eligendi, ipsam itaque libero omnis pariatur perferendis porro sapiente sit voluptas?
         Ipsum, minus.</p>
@@ -24,6 +24,9 @@ require('inc/header.php')
         deleniti, doloribus excepturi harum iste laudantium maiores maxime minima nihil numquam obcaecati possimus sunt
         suscipit tempore ut vel. Consequatur, ipsum?</p>
     </div>
+        <img id="RJ45" src="assets/img/RJ45.png" alt="">
+    </div>
+    <div class="clear"></div>
     <div class="wrap"></div>
 
     <div id="equipe">

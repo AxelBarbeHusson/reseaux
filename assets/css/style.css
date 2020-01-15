@@ -253,13 +253,15 @@ nav li a:hover{
     font-size: 2em;
     margin-left: 30px;
 }
+.gauche {
+    float: left;
+}
+
 #blabla1 {
     margin-top: 25px;
     margin-left: 50px;
     height: 100px;
     width: 450px;
-
-
 }
 
 #blabla2 {
@@ -268,8 +270,17 @@ nav li a:hover{
     width: 600px;
     height: 200px;
     font-size: 15px;
+
 }
 
+#RJ45 {
+    height: 300px;
+    width: 400px;
+    float: right;
+    margin-right: 150px;
+    margin-bottom: 100px;
+
+}
 #equipe {
     background-color:#e1edf7;
     padding-bottom: 50px;
@@ -282,19 +293,19 @@ nav li a:hover{
     margin-bottom: 50px;
 }
 #etienne {
-    height: 400px;
-    width: 300px;
+    width: 20%;
     margin-left: 250px;
+    border-radius: 50%;
 }
 #thibault {
-    height: 400px;
-    width: 300px;
+    width: 20%;
     margin-left: 30px;
+    border-radius: 50%;
 }
 #victor {
-    height: 400px;
-    width: 300px;
+    width: 20%;
     margin-left: 30px;
+    border-radius: 50%;
 }
 #Serveur {
     background-color: #0c0c3c;
