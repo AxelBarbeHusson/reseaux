@@ -346,6 +346,20 @@ nav li a:hover{
     margin-top: 20px;
     color: #fff;
 }
+
+#Support {
+    text-align: center;
+    font-size: 2em;
+    color: #0C0C3C;
+    margin-top: 50px;
+}
+
+#LogoN {
+   width: 20%;
+    margin-left: 615px;
+}
+    /*/ Qui sommes nous /*/
+
 table {
     margin-top: auto;
     border: 1px #000 solid;
