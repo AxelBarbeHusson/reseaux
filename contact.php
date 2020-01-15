@@ -28,17 +28,20 @@ if (!empty($_POST['submitted'])) {
     }
 }
 ?>
-    <div class="wrap2">
-        <div class="contenu">
-            <div id="accordéon">
-                <div id="contact">
-                    <h1>
-                        Vous avez une question , une suggestions?
-                        <br>
-                        <span class="contact_us">Contactez-nous!</span>
-                    </h1>
-                </div>
+    <div class="contenu">
+        <div id="accordéon">
+            <div id="contact">
+                <h1>
+                    Vous avez une question , une suggestion?
+                    <br>
+                    <span class="contact_us">Contactez-nous</span>
+                </h1>
+                <img id="banniere" src="assets/img/Bannieretest.PNG" alt="">
+            </div>
+            <div class="clear"></div>
+            <div class="wrap2">
                 <div id="formulaire">
+                    <p class="howto">Comment procéder?</p>
                     <?php if ($success) { ?>
                         <p class="success">Merci de nous avoir contacté, nous vous renverrons un mail dans les plus
                             brefs délais</p>
@@ -109,11 +112,7 @@ if (!empty($_POST['submitted'])) {
             </div>
         </div>
     </div>
-    <script
-            src="https://code.jquery.com/jquery-2.2.4.min.js"
-            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-            crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+
 <?php
 include_once('inc/footer.php');

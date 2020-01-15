@@ -5,6 +5,11 @@
     width: 100%;
     margin: 0 auto;
 }
+.wrap2 {
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+}
 body{
     font-family: 'Roboto', sans-serif;
 }
@@ -13,6 +18,7 @@ body{
     width: 100%;
     margin: 0 auto;
 }
+
 
 
 /*/ HEADER /*/
@@ -74,7 +80,7 @@ nav li a:hover{
 }
 #presentation_home img{
     padding-top: 80px;
-    width: 100%;
+    width: 90%;
 }
 #presentation_home button{
     padding: 15px 15px;
@@ -189,6 +195,7 @@ nav li a:hover{
     width: 200px;
     float: left;
     margin-left: 20%;
+    margin-bottom: 50px;
 }
 #service_home .text2 {
     position: absolute;
@@ -229,8 +236,6 @@ nav li a:hover{
     color: #0e0838;
 }
 
-
-/*/ HEADER /*/
 
 
 /*/ Qui somme nous /*/
@@ -330,6 +335,20 @@ nav li a:hover{
     margin-top: 20px;
     color: #fff;
 }
+
+#Support {
+    text-align: center;
+    font-size: 2em;
+    color: #0C0C3C;
+    margin-top: 50px;
+}
+
+#LogoN {
+   width: 20%;
+    margin-left: 615px;
+}
+    /*/ Qui sommes nous /*/
+
 table {
     margin-top: auto;
     border: 1px #000 solid;
@@ -348,7 +367,23 @@ thead td {
 }
 /*/ Formulaire de contact /*/
 .contenu {
-    padding-top: 150px;
+    padding-top: 80px;
+}
+#contact h1 {
+    color: white;
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 200px;
+    font-size: 2.5em;
+}
+#contact .contact_us{
+    color : #6DE0F6;
+    border-bottom: solid 2px;
+    border-color : #D1088B
+}
+#contact #banniere {
+    width: 100%;
+    height: 300px;
 }
 .contenu .error {color:red;margin-top: 5px;}
 .contenu .success {font-size:1.5em;color:green;}
@@ -391,6 +426,85 @@ thead td {
 #mapid {
 height: 150px;
 width: 150px;}
+
+
+
+/*/ CONNEXION-INSCRIPTION /*/
+form {
+    text-align: center;
+}
+.formulaire {
+    padding-top: 150px;
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #0e0838;
+    margin-bottom: 50px;
+}
+.backform{
+    background-color:#0C0C3C ;
+    width: 100%;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 20px #080825;
+}
+
+.backform form label {
+    display: block;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+.backform input[type=text] {
+    padding: 7px 25px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.backform input[type=email] {
+    padding: 7px 25px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.backform input[type=password] {
+    padding: 7px 25px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.backform p {
+    margin-bottom: 30px;
+    color: red;
+}
+
+.backform .submit {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #5FC6DA;
+    margin-bottom: 5px;
+}
+.backform .submite {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #5FC6DA;
+    margin-bottom: 55px;
+}
+.backform .submit:hover {
+    transition: 0.5s;
+    background-color: #8CF0FF;
+}
+.backform .forgot {
+    color: white;
+    width: 100%;
+    display: block;
+    padding-bottom: 50px;
+}
 
 /*/FOOTER /*/
 footer {
@@ -449,8 +563,8 @@ footer .barfooter li {
 }
 footer .barfooter .item {
     margin: 0 2%;
+    color: #5FC6DA;
 }
-
 footer .barfooter p {
     font-size: 14px;
 }
