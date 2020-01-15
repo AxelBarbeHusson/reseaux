@@ -189,6 +189,7 @@ nav li a:hover{
     width: 200px;
     float: left;
     margin-left: 20%;
+    margin-bottom: 50px;
 }
 #service_home .text2 {
     position: absolute;
@@ -449,8 +450,8 @@ footer .barfooter li {
 }
 footer .barfooter .item {
     margin: 0 2%;
+    color: #5FC6DA;
 }
-
 footer .barfooter p {
     font-size: 14px;
 }

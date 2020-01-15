@@ -28,7 +28,7 @@
                 <li>76000</li>
                 <li>Rouen, France.</li>
             </ul>
-            <a href="#balise"><i class="material-icons" >arrow_drop_up</i></a>
+            <a href="#balise" class="scroll"><i class="material-icons" >arrow_drop_up</i></a>
         </div>
     </section>
 
@@ -48,6 +48,8 @@
     <script src="assetsAdmin/js/custom.js"></script>
     <!-- IMAGE LI -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <script src="assets/js/main.js">
 </footer>
 </body>
 </html>
