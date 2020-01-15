@@ -83,7 +83,16 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
                 if ($err) {
                     echo "cURL Error #:" . $err;
                 } else {
-                    echo $response;
+                    //echo $response;
+                    ?>
+                    <div id="mapid">
+                        <script type="text/javascript">
+                            var marker = L.marker([<?=$response['latitude']?>,<?=$response['longitude']?>]).addTo(mymap);
+                        </script>
+                    </div>
+
+
+                    <?php
                 }
             }
             //var_dump($michel);
