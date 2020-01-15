@@ -8,6 +8,11 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+.wrap2 {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
 
 
 /*/ HEADER /*/
@@ -39,7 +44,6 @@ nav li a:hover{
     transition: 0.5s;
     color: #8CF0FF;
 }
-
 
 /*/ HOME /*/
 #presentation_home{
@@ -167,6 +171,7 @@ nav li a:hover{
 #service_home{
     padding-top: 50px;
     color: #0e0838;
+
 }
 #service_home h2{
     text-align: center;
@@ -224,6 +229,8 @@ nav li a:hover{
     color: #0e0838;
 }
 
+
+/*/ HEADER /*/
 
 
 /*/ Qui somme nous /*/
@@ -326,43 +333,40 @@ thead td {
     color: #FFF;
     font-weight: bold;
 }
-
-/*/ FOOTER /*/
-footer {
+/*/ Formulaire de contact /*/
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
     width: 100%;
-    background-color: #0C0C3C;
-    margin-top: 100px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
 }
-footer .colonne1{
-    width: 50%;
-    float: left;
-    text-align: center;
-    margin-top: 30px;
+
+.active, .accordion:hover {
+    background-color: #ccc;
 }
-footer .colonne2 {
-    width: 50%;
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
     float: right;
-    text-align: center;
-    margin-top: 30px;
+    margin-left: 5px;
 }
-footer h4 {
-    font-size: 20px;
-    margin-bottom: 10px;
+
+.active:after {
+    content: "\2212";
 }
-footer i {
-    color: #5FC6DA;
-    font-size: 40px;
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
-footer .colonne1 li {
-    width: 50%;
-    display: inline;
-    margin: 0 3%;
-    color: #5FC6DA;
-}
-footer .colonne2 li {
-    color: #5FC6DA;
-}
-footer img {
-    width: 120px;
-}
-footer .bar
