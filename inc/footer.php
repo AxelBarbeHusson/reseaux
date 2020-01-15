@@ -7,7 +7,36 @@
 <script src="assets/js/main.js"></script>
 </div>
 <footer>
-    <p>Nfactory-2019</p>
+    <section id="footer">
+        <div class="colonne1">
+            <h4 >Retrouvez-nous sur :</h4>
+
+            <ul>
+                <li><a href="https://www.facebook.com/" class="facebook"><i class='fab fa-facebook'></i></a></li>
+                <li><a href="https://twitter.com" class="twitter"><i class='fab fa-twitter'></i></a></li>
+            </ul>
+        </div>
+
+
+        <div class="colonne2">
+            <h4 >Localisation :</h4>
+            <ul class="post-list">
+                <li>Wire & Network</li>
+                <li>76000</li>
+                <li>Rouen, France.</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <div class="barfooter">
+            <ul>
+                <li><a href="#" title="">Home</a></li>
+                <li><a href="#" title="">Contact</a></li>
+            </ul>
+        <p class="">Copyright 2020 Wire & Network. Tous droits réservés.</p>
+    </div>
+
     <!-- BOOTSTRAP SCRIPTS -->
     <script src="assetsAdmin/js/bootstrap.min.js"></script>
     <!-- CUSTOM SCRIPTS -->
