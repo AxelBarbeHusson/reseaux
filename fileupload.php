@@ -45,7 +45,7 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
     <tbody>
     <?php
     $nb = count($json);
-    for ($i = 0; $i < $nb; $i++) {
+   for ($i = 0; $i < $nb; $i++) {
         echo '<tr>';
         $row = $json[$i]['_source']['layers'];
         if (isset($row['frame'])){
@@ -62,7 +62,7 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
                 $curl = curl_init();
 
                 curl_setopt_array($curl, array(
-                    CURLOPT_URL => 'https://freegeoip.app/json/'. $ip . '?callback=test',
+                    CURLOPT_URL => 'https://freegeoip.app/json/'. $ip,
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => "",
                     CURLOPT_MAXREDIRS => 10,
@@ -83,15 +83,31 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
                 if ($err) {
                     echo "cURL Error #:" . $err;
                 } else {
-                    //echo $response;
-                    ?>
-                    <div id="mapid">
-                        <script type="text/javascript">
-                            var marker = L.marker([<?=$response['latitude']?>,<?=$response['longitude']?>]).addTo(mymap);
-                        </script>
-                    </div>
+                    //var_dump($response);
+                    $test = json_decode($response);
+                    //var_dump($test);
+                    //var_dump($test->ip);
+                    //echo $response
+debug($test);
+?>
+                    <canvas id="myChart"></canvas>
+                    <script>
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                        var chart = new Chart(ctx, {
+                            // The type of chart we want to create
+                            type: 'line',
 
-
+                            // The data for our dataset
+                            data: {
+                                labels: ['Country', 'February', 'March', 'April', 'May', 'June', 'July'],
+                                datasets: [{
+                                    label: 'My First dataset',
+                                    backgroundColor: 'rgb(255, 99, 132)',
+                                    borderColor: 'rgb(255, 99, 132)',
+                                    data: [0, 10, 5, 2, 20, 30, 45]
+                                }]
+                            },
+                    </script>
                     <?php
                 }
             }
@@ -142,9 +158,16 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
             "Le déplacement du fichier temporaire a échoué" .
             " vérifiez l'existence du répertoire " . $repertoireDestination;
     }
+
+    //var_dump($test);
 }
+
+?>
+
+
+    <?php
 //debug($michel);
-die('ok');
+//die('ok');
 
 }else{
     echo '<p>403</p>';

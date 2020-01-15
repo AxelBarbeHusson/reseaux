@@ -331,7 +331,9 @@ nav li a:hover{
     color: #fff;
 }
 table {
+    margin-top: auto;
     border: 1px #000 solid;
+    width: 95%;
 }
 
 td, th {
@@ -386,7 +388,9 @@ thead td {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-#mapid { height: 180px; }
+#mapid {
+height: 150px;
+width: 150px;}
 
 /*/FOOTER /*/
 footer {
