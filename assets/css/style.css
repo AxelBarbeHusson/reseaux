@@ -18,16 +18,7 @@ body{
     width: 100%;
     margin: 0 auto;
 }
-form label {
-    display: block;
-    width: 100%;
-    color: white;
-    text-transform: uppercase;
-    padding-top: 20px;
-}
-form {
-    text-align: center;
-}
+
 
 
 /*/ HEADER /*/
@@ -246,8 +237,6 @@ nav li a:hover{
 }
 
 
-/*/ HEADER /*/
-
 
 /*/ Qui somme nous /*/
 
@@ -424,18 +413,80 @@ width: 150px;}
 
 
 
-/*/ CONNEXION /*/
+/*/ CONNEXION-INSCRIPTION /*/
+form {
+    text-align: center;
+}
 .formulaire {
-    padding-top: 130px;
+    padding-top: 150px;
     text-align: center;
     font-size: 50px;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #0e0838;
+    margin-bottom: 50px;
 }
 .backform{
     background-color:#0C0C3C ;
     width: 100%;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 20px #080825;
+}
+
+.backform form label {
+    display: block;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+.backform input[type=text] {
+    padding: 7px 25px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.backform input[type=email] {
+    padding: 7px 25px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.backform input[type=password] {
+    padding: 7px 25px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.backform p {
+    margin-bottom: 30px;
+}
+
+.backform .submit {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #5FC6DA;
+    margin-bottom: 5px;
+}
+.backform .submite {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #5FC6DA;
+    margin-bottom: 55px;
+}
+.backform .submit:hover {
+    transition: 0.5s;
+    background-color: #8CF0FF;
+}
+.backform .forgot {
+    color: white;
+    width: 100%;
+    display: block;
+    padding-bottom: 50px;
 }
 
 /*/FOOTER /*/

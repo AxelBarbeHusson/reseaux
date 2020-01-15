@@ -4,7 +4,7 @@ require('inc/pdo.php');
 require('function/function.php');
 $title = 'Connexion';
 $errors = array();
-$succes = false;
+$success = false;
 if (!empty($_POST['submitted'])) {
     $login = clean($_POST['login']);
     $password = clean($_POST['password']);
@@ -37,7 +37,6 @@ if (!empty($_POST['submitted'])) {
             $errors['login'] = 'Pseudo or Email inconnu';
         }
     }
-    header('Location: index.php');
 
 }
 include('inc/header.php');
@@ -59,8 +58,9 @@ include('inc/header.php');
         <p class="error"><?php if (!empty($errors['password'])) {
                 echo $errors['password'];
             } ?></p>
-        <a href="forgetpsw.php">Mot de passe oublié ?</a>
-        <input type="submit" name="submitted" value="Connectez-vous">
+
+        <input type="submit" name="submitted" value="Connectez-vous" class="submit">
+        <a href="forgetpsw.php" class="forgot">Mot de passe oublié ?</a>
     </form>
     </div>
 </div>

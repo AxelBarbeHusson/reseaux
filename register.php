@@ -82,7 +82,9 @@ if (!empty($_POST['submitted'])) {
 //debug($errors);
 include('inc/header.php');
 ?>
-    <h1>Inscriptions</h1>
+<div class="wrap2">
+    <h1 class="formulaire">Inscriptions</h1>
+    <div class="backform">
     <form class="inscri" action="register.php" method="post">
         <label for="pseudo">Pseudo *</label>
         <input type="text" id="pseudo" name="pseudo" value="<?php if (!empty($_POST['pseudo'])) {
@@ -110,10 +112,13 @@ include('inc/header.php');
 
         <label for="password2">Confirmation votre MDP *</label>
         <input type="password" id="password2" name="password2" value="">
+        <p></p>
 
-        <input type="submit" name="submitted" value="Inscrivez-vous">
+        <input type="submit" name="submitted" value="Inscrivez-vous" class="submite">
         <div class="clear"></div>
     </form>
+    </div>
+</div>
 
 <?php
 include('inc/footer.php');
