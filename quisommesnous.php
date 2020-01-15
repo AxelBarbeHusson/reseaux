@@ -9,7 +9,7 @@ require('inc/header.php')
     <body>
     <div id="groupe1">
     <h1 id="qui">Qui sommes nous ?</h1>
-    <img id="Bannieres" src="assets/css/img/Bannieres.jpg" alt="">
+    <img id="Bannieres" src="assets/img/Bannieretest.PNG" alt="">
     <h2 id="titreblabla">Nous avons 60 ans d'experiences dans le dev et oui jamy</h2>
 
     <p id="blabla1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias, aspernatur atque culpa
@@ -30,15 +30,15 @@ require('inc/header.php')
 
         <h3 id="equipetitre">Notre équipe .</h3>
 
-        <img id="etienne" src="assets/css/img/Etienne.jfif" alt="">
+        <img id="etienne" src="assets/img/Etienne.jfif" alt="">
 
-        <img id="thibault" src="assets/css/img/Thibault.jfif" alt="">
+        <img id="thibault" src="assets/img/Thibault.jfif" alt="">
 
-        <img id="victor" src="assets/css/img/Victor.jfif" alt="">
+        <img id="victor" src="assets/img/Victor.jfif" alt="">
 
     </div>
-    <img id="serv" src="assets/css/img/Serveur.jpeg" alt="">
-    <img id="axel" src="assets/css/img/axel.jfif" alt="">
+    <img id="serv" src="assets/img/Serveur.jpeg" alt="">
+    <img id="axel" src="assets/img/axel.jfif" alt="">
     <p id="blabla3">Axel chef de projet et plus beau de tout les rebeux</p>
     <div id="Serveur"</div>
     <div class="wrap"></div>

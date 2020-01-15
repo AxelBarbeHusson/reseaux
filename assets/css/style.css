@@ -239,7 +239,7 @@ nav li a:hover{
     color: white;
     position: absolute;
     margin-top: 150px;
-    margin-left: 250px;
+    margin-left: 200px;
     font-size: 3em;
 
 }
@@ -297,7 +297,7 @@ nav li a:hover{
     margin-left: 30px;
 }
 #Serveur {
-    background-color: #2a0e62;
+    background-color: #0c0c3c;
 }
 
 #serv {
