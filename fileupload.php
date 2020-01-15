@@ -4,6 +4,8 @@ require('inc/pdo.php');
 require('function/function.php');
 include('inc/header.php');
 if (isLogged()){
+
+
 $nomOrigine = $_FILES['monfichier']['name'];
 $elementsChemin = pathinfo($nomOrigine);
 $extensionFichier = $elementsChemin['extension'];
@@ -34,8 +36,10 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
         <th>eth.src</th>
         <th>eth.dst</th>
         <th>http.host</th>
-        <th>UDP</th>
-        <th>TCP</th>
+        <th>UDP.src</th>
+        <th>UDP.dst</th>
+        <th>TCP.src</th>
+        <th>TCP.dst</th>
     </tr>
     </thead>
     <tbody>
@@ -50,9 +54,42 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
         if (isset($row['ip'])) {
             echo '<td>' . $json[$i]['_source']['layers']['ip']['ip.src'] . '</td>';
             echo '<td>' . $json[$i]['_source']['layers']['ip']['ip.dst'] . '</td>';
+            $michel = array();
+            array_push($michel,$json[$i]['_source']['layers']['ip']['ip.dst']);
+
+            foreach ($michel as $value){
+                $ip = $value;
+                $curl = curl_init();
+
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => 'https://freegeoip.app/json/'. $ip . '?callback=test',
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => "",
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 30,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => "GET",
+                    CURLOPT_HTTPHEADER => array(
+                    "accept: application/json",
+                    "content-type: application/json"
+                    ),
+                ));
+
+                $response = curl_exec($curl);
+                $err = curl_error($curl);
+
+                curl_close($curl);
+
+                if ($err) {
+                    echo "cURL Error #:" . $err;
+                } else {
+                    echo $response;
+                }
+            }
+            //var_dump($michel);
         }else{
-            echo '<td></td>';
-            echo '<td></td>';
+            echo '<td>-</td>';
+            echo '<td>-</td>';
         }
         if (isset($row['eth'])) {
             echo '<td>' . $json[$i]['_source']['layers']['eth']['eth.src'] . '</td>';
@@ -64,7 +101,7 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
             echo '<td>' . $json[$i]['_source']['layers']['ssdp']['http.host'] . '</td>';
 
         }else{
-            echo '<td></td>';
+            echo '<td>-</td>';
         }
 
         if (isset($row['udp'])) {
@@ -72,14 +109,14 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
             echo '<td>' . $json[$i]['_source']['layers']['udp']['udp.srcport'] . '</td>';
             echo '<td>' . $json[$i]['_source']['layers']['udp']['udp.dstport'] . '</td>';
         }else{
-            echo '<td></td>';
+            echo '<td>-</td>';
         }
         if (isset($row['tcp'])) {
             //echo '<td>TCP</td>';
             echo '<td>' . $json[$i]['_source']['layers']['tcp']['tcp.srcport'] . '</td>';
             echo '<td>' . $json[$i]['_source']['layers']['tcp']['tcp.dstport'] . '</td>';
         }else{
-            echo '<td></td>';
+            echo '<td>-</td>';
         }
 
         echo '</tr>';
@@ -97,6 +134,9 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
             " vérifiez l'existence du répertoire " . $repertoireDestination;
     }
 }
+//debug($michel);
+die('ok');
+
 }else{
     echo '<p>403</p>';
 }
