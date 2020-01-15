@@ -371,3 +371,45 @@ thead td {
     transition: max-height 0.2s ease-out;
 }
 #mapid { height: 180px; }
+
+/*/FOOTER /*/
+footer {
+    width: 100%;
+    background-color: #0C0C3C;
+    margin-top: 100px;
+}
+footer .colonne1{
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-top: 30px;
+}
+footer .colonne2 {
+    width: 50%;
+    float: right;
+    text-align: center;
+    margin-top: 30px;
+}
+footer h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+footer i {
+    color: #5FC6DA;
+    font-size: 40px;
+}
+footer .colonne1 li {
+    width: 50%;
+    display: inline;
+    margin: 0 3%;
+    color: #5FC6DA;
+}
+footer .colonne2 li {
+    color: #5FC6DA;
+}
+footer img {
+    width: 120px;
+}
+footer .barfooter{
+
+}
