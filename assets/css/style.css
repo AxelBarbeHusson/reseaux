@@ -5,6 +5,11 @@
     width: 100%;
     margin: 0 auto;
 }
+.wrap2 {
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+}
 body{
     font-family: 'Roboto', sans-serif;
 }
@@ -12,6 +17,16 @@ body{
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
+}
+form label {
+    display: block;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+form {
+    text-align: center;
 }
 
 
@@ -74,7 +89,7 @@ nav li a:hover{
 }
 #presentation_home img{
     padding-top: 80px;
-    width: 100%;
+    width: 90%;
 }
 #presentation_home button{
     padding: 15px 15px;
@@ -392,6 +407,22 @@ thead td {
 #mapid {
 height: 150px;
 width: 150px;}
+
+
+
+/*/ CONNEXION /*/
+.formulaire {
+    padding-top: 130px;
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #0e0838;
+}
+.backform{
+    background-color:#0C0C3C ;
+    width: 100%;
+}
 
 /*/FOOTER /*/
 footer {

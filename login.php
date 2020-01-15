@@ -42,7 +42,9 @@ if (!empty($_POST['submitted'])) {
 }
 include('inc/header.php');
 ?>
-    <h1>Connexion</h1>
+<div class="wrap2">
+    <h1 class="formulaire">Connexion</h1>
+    <div class="backform">
     <form class="inscri" action="login.php" method="post">
         <label from="login">Pseudo ou email *</label>
         <input type="text" name="login" id="login" value="<?php if (!empty($_POST['login'])) {
@@ -60,7 +62,7 @@ include('inc/header.php');
         <a href="forgetpsw.php">Mot de passe oublié ?</a>
         <input type="submit" name="submitted" value="Connectez-vous">
     </form>
-
-
+    </div>
+</div>
 <?php
 include('inc/footer.php');
