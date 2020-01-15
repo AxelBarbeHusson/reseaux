@@ -378,7 +378,23 @@ thead td {
 }
 /*/ Formulaire de contact /*/
 .contenu {
-    padding-top: 150px;
+    padding-top: 80px;
+}
+#contact h1 {
+    color: white;
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 200px;
+    font-size: 2.5em;
+}
+#contact .contact_us{
+    color : #6DE0F6;
+    border-bottom: solid 2px;
+    border-color : #D1088B
+}
+#contact #banniere {
+    width: 100%;
+    height: 300px;
 }
 .contenu .error {color:red;margin-top: 5px;}
 .contenu .success {font-size:1.5em;color:green;}
