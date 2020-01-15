@@ -28,14 +28,16 @@
                 <li>76000</li>
                 <li>Rouen, France.</li>
             </ul>
+            <a href="#balise"><i class="material-icons" >arrow_drop_up</i></a>
         </div>
     </section>
 
-
+<div class="clear"></div>
     <div class="barfooter">
             <ul>
-                <li><a href="#" title="">Home</a></li>
-                <li><a href="#" title="">Contact</a></li>
+                <li><a href="services.php" class="item">Services</a></li>
+                <li><a>| |</a></li>
+                <li><a href="contact.php" class="item">Contact</a></li>
             </ul>
         <p class="">Copyright 2020 Wire & Network. Tous droits réservés.</p>
     </div>
