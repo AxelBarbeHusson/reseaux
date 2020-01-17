@@ -27,6 +27,8 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
         //debug($json);
 
         ?>
+
+
 <table>
     <thead>
     <tr>
@@ -45,6 +47,7 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
     <tbody>
     <?php
     $nb = count($json);
+    $tapindesbois = array();
    for ($i = 0; $i < $nb; $i++) {
         echo '<tr>';
         $row = $json[$i]['_source']['layers'];
@@ -57,6 +60,7 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
             $michel = array();
             array_push($michel,$json[$i]['_source']['layers']['ip']['ip.dst']);
 
+            $dede = array();
             foreach ($michel as $value){
                 $ip = $value;
                 $curl = curl_init();
@@ -85,33 +89,39 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
                 } else {
                     //var_dump($response);
                     $test = json_decode($response);
+;
+                    $longitude = $test->longitude;
+                    $latitude = $test->latitude;
+                    $countryName = $test->country_name;
+                    //debug($longitude);
+                    //debug($latitude);
                     //var_dump($test);
                     //var_dump($test->ip);
                     //echo $response
-debug($test);
-?>
-                    <canvas id="myChart"></canvas>
-                    <script>
-                        var ctx = document.getElementById('myChart').getContext('2d');
-                        var chart = new Chart(ctx, {
-                            // The type of chart we want to create
-                            type: 'line',
+                    $z = [
+                        'latitude' => $latitude,
+                        'longitude' => $longitude,
+                        'country_name' => $countryName
+                    ];
+                    if ($z['latitude']===0 && $z['longitude']===0 && $z['country_name']===""){
+                        unset($z['latitude']);
+                        unset($z['longitude']);
+                        unset($z['country_name']);
+                    }else{
+                        $longitude= $z['longitude'];
+                        $latitude= $z['latitude'];
+                        $countryName = $z['country_name'];
+                        //debug($z);
 
-                            // The data for our dataset
-                            data: {
-                                labels: ['Country', 'February', 'March', 'April', 'May', 'June', 'July'],
-                                datasets: [{
-                                    label: 'My First dataset',
-                                    backgroundColor: 'rgb(255, 99, 132)',
-                                    borderColor: 'rgb(255, 99, 132)',
-                                    data: [0, 10, 5, 2, 20, 30, 45]
-                                }]
-                            },
-                    </script>
-                    <?php
+                    }
+
+                    //$iptranlate .= array_push($z);
                 }
+                $dede[]= $z;
+
+
             }
-            //var_dump($michel);
+
         }else{
             echo '<td>-</td>';
             echo '<td>-</td>';
@@ -145,10 +155,140 @@ debug($test);
         }
 
         echo '</tr>';
+       if (empty($dede[0])){
+           unset($dede[0]);
+       }else{
+           //debug($dede[0]);
+           array_push($tapindesbois,$dede[0]);
+       }
+
+    }
+   $putasdesforets =count($tapindesbois);
+   debug($tapindesbois);
+
+    for ($i = 0; $i < $putasdesforets; $i++) {
+        $locat = $tapindesbois[$i]['latitude'] . ',' . $tapindesbois[$i]['longitude'];
+for ($i = 1; $i < $putasdesforets; $i++){
+    if ($locat === $locat){
+        unset($locat);
+    }else{
+        echo $locat;
+    }
+}
     }
     ?>
     </tbody>
 </table>
+
+
+        <div id='map' style='width: 400px; height: 300px;'></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiYXhlbGJhcmJlaHVzc29uIiwiYSI6ImNrNWZlNWE5cTJrMDczbXBnOGI4NTk2MTMifQ.5l3FgdaFC4KAGnfabyT6Kw';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [7.04, 8.907],
+                zoom: 11.15
+            });
+            var size = 200;
+
+            // implementation of CustomLayerInterface to draw a pulsing dot icon on the map
+            // see https://docs.mapbox.com/mapbox-gl-js/api/#customlayerinterface for more info
+            var pulsingDot = {
+                width: size,
+                height: size,
+                data: new Uint8Array(size * size * 4),
+
+// get rendering context for the map canvas when layer is added to the map
+                onAdd: function() {
+                    var canvas = document.createElement('canvas');
+                    canvas.width = this.width;
+                    canvas.height = this.height;
+                    this.context = canvas.getContext('2d');
+                },
+
+// called once before every frame where the icon will be used
+                render: function() {
+                    var duration = 1000;
+                    var t = (performance.now() % duration) / duration;
+
+                    var radius = (size / 2) * 0.3;
+                    var outerRadius = (size / 2) * 0.7 * t + radius;
+                    var context = this.context;
+
+// draw outer circle
+                    context.clearRect(0, 0, this.width, this.height);
+                    context.beginPath();
+                    context.arc(
+                        this.width / 2,
+                        this.height / 2,
+                        outerRadius,
+                        0,
+                        Math.PI * 2
+                    );
+                    context.fillStyle = 'rgba(255, 200, 200,' + (1 - t) + ')';
+                    context.fill();
+
+// draw inner circle
+                    context.beginPath();
+                    context.arc(
+                        this.width / 2,
+                        this.height / 2,
+                        radius,
+                        0,
+                        Math.PI * 2
+                    );
+                    context.fillStyle = 'rgba(255, 100, 100, 1)';
+                    context.strokeStyle = 'white';
+                    context.lineWidth = 2 + 4 * (1 - t);
+                    context.fill();
+                    context.stroke();
+
+// update this image's data with data from the canvas
+                    this.data = context.getImageData(
+                        0,
+                        0,
+                        this.width,
+                        this.height
+                    ).data;
+
+// continuously repaint the map, resulting in the smooth animation of the dot
+                    map.triggerRepaint();
+
+// return `true` to let the map know that the image was updated
+                    return true;
+                }
+            };
+
+            map.on('load', function() {
+                map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
+
+                map.addLayer({
+                    'id': 'points',
+                    'type': 'symbol',
+                    'source': {
+                        'type': 'geojson',
+                        'data': {
+                            'type': 'FeatureCollection',
+                            'features': [
+                                {
+                                    'type': 'Feature',
+                                    'geometry': {
+                                        'type': 'Point',
+                                        'coordinates': [0, 0]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    'layout': {
+                        'icon-image': 'pulsing-dot'
+                    }
+                });
+                <?php ?>
+            });
+        </script>
+
 
         <?php
 
