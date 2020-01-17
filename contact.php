@@ -29,7 +29,8 @@ if (!empty($_POST['submitted'])) {
         $success = true;
     }
 }
-include('inc/header.php'); ?>
+include('inc/header.php');
+?>
     <div class="contenu">
         <div id="contact">
             <h1>
