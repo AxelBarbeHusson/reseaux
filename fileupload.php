@@ -164,19 +164,24 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
 
     }
    $putasdesforets =count($tapindesbois);
-   debug($tapindesbois);
+   //debug($tapindesbois);
 
+    $atltitude = array();
     for ($i = 0; $i < $putasdesforets; $i++) {
         $locat = $tapindesbois[$i]['latitude'] . ',' . $tapindesbois[$i]['longitude'];
-for ($i = 1; $i < $putasdesforets; $i++){
-    if ($locat === $locat){
-        unset($locat);
-    }else{
-        echo $locat;
+        if($i == 0) {
+            $atltitude[] = $locat;
+        } else {
+            if(in_array($locat,$atltitude)) {
+                unset($tapindesbois[$i]);
+            }else {
+                $atltitude[] = $locat;
+            }
+        }
     }
-}
-    }
-    ?>
+    //debug($tapindesbois);
+
+?>
     </tbody>
 </table>
 
@@ -271,13 +276,20 @@ for ($i = 1; $i < $putasdesforets; $i++){
                         'data': {
                             'type': 'FeatureCollection',
                             'features': [
+                                <?php  foreach ($tapindesbois as $adresse){
+
+                                //debug();
+
+                                ?>
                                 {
+
                                     'type': 'Feature',
                                     'geometry': {
                                         'type': 'Point',
-                                        'coordinates': [0, 0]
+                                        'coordinates': [<?=$adresse['longitude']?>,<?=$adresse['latitude']?>]
                                     }
-                                }
+                                },
+                <?php } ?>
                             ]
                         }
                     },
@@ -285,7 +297,7 @@ for ($i = 1; $i < $putasdesforets; $i++){
                         'icon-image': 'pulsing-dot'
                     }
                 });
-                <?php ?>
+
             });
         </script>
 
