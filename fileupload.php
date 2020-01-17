@@ -181,8 +181,7 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
     }
     //debug($tapindesbois);
 
-
-    ?>
+?>
     </tbody>
 </table>
 
@@ -268,8 +267,7 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
 
             map.on('load', function() {
                 map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
-<?php foreach ($tapindesbois as $adresse){
-    debug($adresse);?>
+
                 map.addLayer({
                     'id': 'points',
                     'type': 'symbol',
@@ -278,13 +276,20 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
                         'data': {
                             'type': 'FeatureCollection',
                             'features': [
+                                <?php  foreach ($tapindesbois as $adresse){
+
+                                //debug();
+
+                                ?>
                                 {
+
                                     'type': 'Feature',
                                     'geometry': {
                                         'type': 'Point',
-                                        'coordinates': [0, 0]
+                                        'coordinates': [<?=$adresse['longitude']?>,<?=$adresse['latitude']?>]
                                     }
-                                }
+                                },
+                <?php } ?>
                             ]
                         }
                     },
@@ -292,7 +297,7 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
                         'icon-image': 'pulsing-dot'
                     }
                 });
-                <?php }?>
+
             });
         </script>
 
