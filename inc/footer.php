@@ -36,10 +36,10 @@
     <div class="barfooter">
             <ul>
                 <li><a href="services.php" class="item">Services</a></li>
-                <li><a>| |</a></li>
+                <li id="Slash"><a>| |</a></li>
                 <li><a href="contact.php" class="item">Contact</a></li>
             </ul>
-        <p class="">Copyright 2020 Wire & Network. Tous droits réservés.</p>
+        <p class="Copyright">Copyright 2020 Wire & Network. Tous droits réservés.</p>
     </div>
 
     <!-- BOOTSTRAP SCRIPTS -->
