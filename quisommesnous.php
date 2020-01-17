@@ -57,7 +57,7 @@ require('inc/header.php')
     <section id="soutien">
         <div class="nfacto">
             <h4 id="support">En partenariat avec :</h4>
-            <img id="Logon" src="assets/img/Nfactory.png" alt="">
+            <img id="logon" src="assets/img/Nfactory.png" alt="">
         </div>
 
     </section>

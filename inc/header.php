@@ -7,10 +7,10 @@
         } else {
             echo '';
         } ?></title>
-    <!--<link rel="stylesheet" href="assets/css/style.css">-->
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet'/>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <!--<link rel="stylesheet" media="screen and (max-width: 700px)" href="style.css" type="text/css" /> -->
 
@@ -32,18 +32,18 @@
                 <li><a href="contact.php">Contact</a></li>
 
 
-            <?php }elseif(idAdmin()){?>
+            <?php } elseif (idAdmin()) { ?>
                 <li><a href="logout.php">Deconnexion</a></li>
                 <li><a href="admin.php">Pannel admin</a></li>
                 <li class="bienvenue">Bonjour <?php echo $_SESSION['login']['pseudo'] ?> !</li>
 
-           <?php }  else { ?>
-                    <a href="index.php"><img src="assets/img/image2vector.svg" class="logo"></a>
-            <li><a href="logout.php">Deconnexion</a></li>
-                    <li><a href="quisommesnous.php">Qui sommes nous ?</a></li>
-                    <li><a href="services.php">Services</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-            <?php }?>
+            <?php } else { ?>
+                <a href="index.php"><img src="assets/img/image2vector.svg" class="logo"></a>
+                <li><a href="logout.php">Deconnexion</a></li>
+                <li><a href="quisommesnous.php">Qui sommes nous ?</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            <?php } ?>
         </ul>
     </nav>
 </header>
