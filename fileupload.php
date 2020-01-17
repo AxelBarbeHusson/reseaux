@@ -164,18 +164,24 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
 
     }
    $putasdesforets =count($tapindesbois);
-   debug($tapindesbois);
+   //debug($tapindesbois);
 
+    $atltitude = array();
     for ($i = 0; $i < $putasdesforets; $i++) {
         $locat = $tapindesbois[$i]['latitude'] . ',' . $tapindesbois[$i]['longitude'];
-for ($i = 1; $i < $putasdesforets; $i++){
-    if ($locat === $locat){
-        unset($locat);
-    }else{
-        echo $locat;
+        if($i == 0) {
+            $atltitude[] = $locat;
+        } else {
+            if(in_array($locat,$atltitude)) {
+                unset($tapindesbois[$i]);
+            }else {
+                $atltitude[] = $locat;
+            }
+        }
     }
-}
-    }
+    //debug($tapindesbois);
+
+
     ?>
     </tbody>
 </table>
@@ -262,7 +268,8 @@ for ($i = 1; $i < $putasdesforets; $i++){
 
             map.on('load', function() {
                 map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
-
+<?php foreach ($tapindesbois as $adresse){
+    debug($adresse);?>
                 map.addLayer({
                     'id': 'points',
                     'type': 'symbol',
@@ -285,7 +292,7 @@ for ($i = 1; $i < $putasdesforets; $i++){
                         'icon-image': 'pulsing-dot'
                     }
                 });
-                <?php ?>
+                <?php }?>
             });
         </script>
 
