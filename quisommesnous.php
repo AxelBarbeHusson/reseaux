@@ -49,8 +49,7 @@ require('inc/header.php')
             <img id="axel" src="assets/img/axel.jfif" alt="">
             <p id="blabla3">Axel chef de projet et plus beau de tout les rebeux</p>
         </div>
-        <div id="serveur"
-        </div>
+
         <div class="wrap"></div>
         <div class="clear"></div>
     </section>
