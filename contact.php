@@ -30,6 +30,7 @@ if (!empty($_POST['submitted'])) {
     }
 }
 include('inc/header.php');?>
+    <div id="balise"></div>
     <div class="contenu">
         <div id="contact">
             <h1>
