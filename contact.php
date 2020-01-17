@@ -87,8 +87,8 @@ if (!empty($_POST['submitted'])) {
             </div>
             <?php } ?>
             <div id="accordion">
-                <p class="FAQ">Foire aux questions</p>
-                <button class="accordion"><span class="num">1 - </span>Lorem ipsum dolor sit amet?</button>
+                <p class="faq">Foire aux questions</p>
+                <button class="accordion" checked><span class="num">1 - </span>Lorem ipsum dolor sit amet?</button>
                 <div class="panel">
                     <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
                         ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
@@ -110,14 +110,16 @@ if (!empty($_POST['submitted'])) {
                         fames ac
                         turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
                 </div>
-                <button class="accordion"><span class="num">4 - </span>Vestibulum dapibus, mauris nec malesuada?</button>
+                <button class="accordion"><span class="num">4 - </span>Vestibulum dapibus, mauris nec malesuada?
+                </button>
                 <div class="panel">
                     <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
                         malesuada
                         fames ac
                         turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
                 </div>
-                <button class="accordion"><span class="num">5 - </span>Nulla ipsum dolor lacus, suscipit adipiscing?</button>
+                <button class="accordion"><span class="num">5 - </span>Nulla ipsum dolor lacus, suscipit adipiscing?
+                </button>
                 <div class="panel">
                     <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
                         malesuada
@@ -127,7 +129,5 @@ if (!empty($_POST['submitted'])) {
             </div>
         </div>
     </div>
-
-
 <?php
 include_once('inc/footer.php');

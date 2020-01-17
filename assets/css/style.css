@@ -422,7 +422,11 @@ thead td {
     font-size: 15px;
     color: red;
 }
-
+.formulaire2 .success {
+    text-align: center;
+    font-size: 30px;
+    color: green;
+}
 .formulaire2 .howto {
 
     text-align: center;
@@ -553,7 +557,7 @@ thead td {
     background-color: #5FC6DA;
     margin-bottom: 5px;
 }
-.FAQ {
+.faq {
     font-size: 48px;
     line-height: 55px;
     font-weight: 500;
