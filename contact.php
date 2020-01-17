@@ -88,7 +88,7 @@ include('inc/header.php');?>
             <?php } ?>
             <div id="accordion">
                 <p class="faq">Foire aux questions</p>
-                <button class="accordion" checked><span class="num">1 - </span>Lorem ipsum dolor sit amet?</button>
+                <button class="accordion"><span class="num">1 - </span>Lorem ipsum dolor sit amet?</button>
                 <div class="panel">
                     <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
                         ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
