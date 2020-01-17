@@ -2,7 +2,6 @@
 session_start();
 require('inc/pdo.php');
 require('function/function.php');
-include('inc/header.php');
 $title = 'Page de contact';
 $errors = array();
 $success = false;
@@ -30,7 +29,7 @@ if (!empty($_POST['submitted'])) {
         $success = true;
     }
 }
-?>
+include('inc/header.php');?>
     <div class="contenu">
         <div id="contact">
             <h1>
