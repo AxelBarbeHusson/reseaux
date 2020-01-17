@@ -164,11 +164,13 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
 
     }
    $putasdesforets =count($tapindesbois);
+   $how = array();
    //debug($tapindesbois);
 
     $atltitude = array();
     for ($i = 0; $i < $putasdesforets; $i++) {
         $locat = $tapindesbois[$i]['latitude'] . ',' . $tapindesbois[$i]['longitude'];
+        array_push($how,$tapindesbois[$i]['country_name']);
         if($i == 0) {
             $atltitude[] = $locat;
         } else {
@@ -180,7 +182,9 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
         }
     }
     //debug($tapindesbois);
+    //array_count_values($how);
 
+debug($how);
 ?>
     </tbody>
 </table>
