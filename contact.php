@@ -8,10 +8,13 @@ $errors = array();
 $success = false;
 if (!empty($_POST['submitted'])) {
     $nom = clean($_POST['nom']);
+    $errors = textWalid($errors, $nom, 'nom', 3, 20);
     $prenom = clean($_POST['prenom']);
+    $errors = textWalid($errors, $prenom, 'prenom', 3, 20);
     $email = clean($_POST['email']);
     $errors = emailValidation($errors, $email, 'email');
     $subject = clean($_POST['subject']);
+    $errors = textWalid($errors, $subject, 'subject', 5, 30);
     $message = clean($_POST['message']);
     $errors = textWalid($errors, $message, 'message', 5, 2000);
     if (count($errors) == 0) {
@@ -31,9 +34,7 @@ if (!empty($_POST['submitted'])) {
     <div class="contenu">
         <div id="contact">
             <h1>
-                Vous avez une question , une suggestion?
-                <br>
-                <span class="contact_us">Contactez-nous</span>
+                Vous avez une question , <br> <span class="contact_us"> une suggestion?</span>
             </h1>
             <img id="banniere" src="assets/img/Bannieretest.PNG" alt="">
         </div>
@@ -44,7 +45,7 @@ if (!empty($_POST['submitted'])) {
                     <p class="success">Merci de nous avoir contacté, nous vous renverrons un mail dans les plus
                         brefs délais</p>
                 <?php } else  { ?>
-                <p class="howto">Comment procéder?</p>
+                <p class="howto">Contactez nous !</p>
                 <div class="backform2">
                     <form action="contact.php" method="post" novalidate>
                         <label for="nom"></label>
@@ -80,13 +81,14 @@ if (!empty($_POST['submitted'])) {
                         <p class="error"><?php if (!empty($errors['message'])) {
                                 echo $errors['message'];
                             } ?></p>
-                        <input type="submit" name="submitted" value="Envoyer">
+                        <input id="submit" type="submit" name="submitted" value="Envoyer">
                     </form>
                 </div>
             </div>
             <?php } ?>
             <div id="accordion">
-                <button class="accordion">Lorem ipsum dolor sit amet?</button>
+                <p class="FAQ">Foire aux questions</p>
+                <button class="accordion"><span class="num">1 - </span>Lorem ipsum dolor sit amet?</button>
                 <div class="panel">
                     <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
                         ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
@@ -94,28 +96,28 @@ if (!empty($_POST['submitted'])) {
                         odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
                 </div>
 
-                <button class="accordion">Donec vestibulum justo a diam?</button>
+                <button class="accordion"><span class="num">2 - </span>Donec vestibulum justo a diam?</button>
                 <div class="panel">
                     <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
                         malesuada
                         fames ac
                         turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
                 </div>
-                <button class="accordion">Quisque lorem tortor fringilla sed?</button>
+                <button class="accordion"><span class="num">3 - </span>Quisque lorem tortor fringilla sed?</button>
                 <div class="panel">
                     <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
                         malesuada
                         fames ac
                         turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
                 </div>
-                <button class="accordion">Vestibulum dapibus, mauris nec malesuada?</button>
+                <button class="accordion"><span class="num">4 - </span>Vestibulum dapibus, mauris nec malesuada?</button>
                 <div class="panel">
                     <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
                         malesuada
                         fames ac
                         turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
                 </div>
-                <button class="accordion">Nulla ipsum dolor lacus, suscipit adipiscing?</button>
+                <button class="accordion"><span class="num">5 - </span>Nulla ipsum dolor lacus, suscipit adipiscing?</button>
                 <div class="panel">
                     <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
                         malesuada
