@@ -29,12 +29,12 @@ if (!empty($_POST['submitted'])) {
         $success = true;
     }
 }
-include('inc/header.php');?>
+include('inc/header.php'); ?>
     <div id="balise"></div>
     <div class="contenu">
         <div id="contact">
             <h1>
-                Vous avez une question , <br> <span class="contact_us"> une suggestion?</span>
+                Vous avez <span class="contact_us">une question ?</span>
             </h1>
             <img id="banniere" src="assets/img/Bannieretest.PNG" alt="">
         </div>
@@ -130,4 +130,12 @@ include('inc/header.php');?>
         </div>
     </div>
 <?php
-include_once('inc/footer.php');
+if (isSubbed()) { ?>
+    <div class="sub_questions">
+        <h3 class="titre_sub"> Nous répondons à vos questions !</h3>
+        <?php
+
+        ?>
+    </div>
+<?php } ?>
+<? include_once('inc/footer.php');

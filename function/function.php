@@ -43,7 +43,7 @@ function emailValidation($err, $mail, $key)
 
 function isLogged()
 {
-    $roles = array('users', 'admin');
+    $roles = array('users', 'admin', 'subscriber');
     if (!empty ($_SESSION['login'])) {
         if (!empty($_SESSION['login']['id']) && filter_var($_SESSION['login']['id'], FILTER_VALIDATE_INT)) {
             if (!empty($_SESSION['login']['pseudo']) && is_string($_SESSION['login']['pseudo'])) {
@@ -69,7 +69,15 @@ function idAdmin()
     }
     return false;
 }
-
+function isSubbed()
+{
+    if (isLogged()) {
+        if(!empty($_SESSION['login']['role'] === 'subscriber')) {
+            return true;
+        }
+    }
+    return false;
+}
 function verifyMail(string $mail, array $tableauMails): bool
 {
     $domaine = explode('@', $mail);
