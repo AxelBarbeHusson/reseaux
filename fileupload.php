@@ -9,7 +9,7 @@ if (isLogged()){
 $nomOrigine = $_FILES['monfichier']['name'];
 $elementsChemin = pathinfo($nomOrigine);
 $extensionFichier = $elementsChemin['extension'];
-$extensionsAutorisees = array("pdf", "json", "sql");
+$extensionsAutorisees = array( "json");
 if (!(in_array($extensionFichier, $extensionsAutorisees))) {
     echo "Le fichier n'a pas l'extension attendue";
 } else {
@@ -184,8 +184,30 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
     //debug($tapindesbois);
     //array_count_values($how);
 
-debug($how);
-?>
+//debug($how);
+    $charts = array();
+
+
+    $vi= array_count_values($how);
+    array_push($charts,$vi);
+
+    // debug($charts);
+    $name = array_keys($charts[0]);
+$geralt = '';
+    foreach ($name as $value) {
+        $geralt.= '' . $value . ',';
+    }
+echo $geralt;
+echo '<pre>';
+$lambert = '';
+
+    foreach ($charts[0] as $nbOfCountry){
+        $lambert .= $nbOfCountry . ',';
+    }
+echo $lambert;
+
+
+    ?>
     </tbody>
 </table>
 
@@ -196,8 +218,8 @@ debug($how);
             var map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/streets-v11',
-                center: [7.04, 8.907],
-                zoom: 11.15
+                center: [0, 0],
+                zoom: 0.5
             });
             var size = 200;
 
@@ -280,7 +302,9 @@ debug($how);
                         'data': {
                             'type': 'FeatureCollection',
                             'features': [
-                                <?php  foreach ($tapindesbois as $adresse){
+                                <?php
+
+                                foreach ($tapindesbois as $adresse){
 
                                 //debug();
 
@@ -304,7 +328,46 @@ debug($how);
 
             });
         </script>
-
+        <canvas id="myChart" width="400" height="400"></canvas>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [<?=$geralt?>],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [<?=$lambert?>],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
 
         <?php
 

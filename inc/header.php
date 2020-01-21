@@ -7,13 +7,13 @@
         } else {
             echo '';
         } ?></title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!--<link rel="stylesheet" href="assets/css/style.css">-->
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet'/>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <!--<link rel="stylesheet" media="screen and (max-width: 700px)" href="style.css" type="text/css" /> -->
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
