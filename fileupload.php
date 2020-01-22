@@ -190,9 +190,9 @@ if (isLogged()) {
                 $vi = array_count_values($how);
                 array_push($charts, $vi);
 
-                // debug($charts);
+                 debug($charts);
                 $name = array_keys($charts[0]);
-
+debug($name);
 
                 ?>
                 </tbody>
