@@ -41,11 +41,13 @@ if (!empty($_POST['submitted'])) {
 }
 include('inc/header.php');
 ?>
-<div class="wrap2">
+    <div id="balise"></div>
+<div class="wrap">
     <h1 class="formulaire">Connexion</h1>
     <div class="backform">
+
     <form class="inscri" action="login.php" method="post">
-        <label from="login">Pseudo ou email *</label>
+        <label for="login" class="login">Pseudo ou email *</label>
         <input type="text" name="login" id="login" value="<?php if (!empty($_POST['login'])) {
             echo $_POST['login'];
         } ?>">
@@ -53,7 +55,7 @@ include('inc/header.php');
                 echo $errors['login'];
             } ?></p>
 
-        <label from="password">Mot de passe *</label>
+        <label for="password">Mot de passe *</label>
         <input type="password" name="password" id="password" value="">
         <p class="error"><?php if (!empty($errors['password'])) {
                 echo $errors['password'];

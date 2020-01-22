@@ -26,10 +26,9 @@
                 <li>76000</li>
                 <li>Rouen, France.</li>
             </ul>
-            <a href="#balise" class="scroll"><i class="material-icons" >arrow_drop_up</i></a>
         </div>
+        <a href="#balise" class="scroll"><i class="material-icons" >arrow_drop_up</i></a>
     </section>
-
 <div class="clear"></div>
     <div class="barfooter">
             <ul>
