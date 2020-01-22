@@ -8,11 +8,12 @@ require('inc/header.php')
 
     <body>
     <div id="balise"></div>
+    <div class="wrap">
     <section id="groupe1">
-        <h1 id="qui">Qui sommes nous ?</h1>
-        <img id="bannieres" src="assets/img/Bannieretest.PNG" alt="">
-        <h2 id="titreblabla">Nous avons 60 ans d'experiences dans le dev et oui jamy</h2>
+        <h2 class="qui">Qui sommes nous ?</h2>
+        <div class="bar"></div>
         <div class="gauche">
+            <h3 id="titreblabla">Des jeunes développeurs expérimentés</h3>
             <p id="blabla1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias, aspernatur
                 atque culpa
                 deserunt distinctio dolor eligendi, ipsam itaque libero omnis pariatur perferendis porro sapiente sit
@@ -26,14 +27,11 @@ require('inc/header.php')
                 doloribus enim, hic laboriosam nostrum rem, sunt ullam velit vero!</p>
 
         </div>
-        <img id="rj45" src="assets/img/RJ45.png" alt="">
+        <img id="rj45" src="assets/img/RJ45.png" alt="image cable">
     </section>
-    <div class="clear"></div>
-    <div class="wrap"></div>
-
     <section id="equipe">
 
-        <h3 id="equipetitre">Notre équipe .</h3>
+        <h2 class="team">Notre équipe </h2>
 
         <img id="etienne" src="assets/img/Etienne.jfif" alt="">
 
@@ -50,7 +48,6 @@ require('inc/header.php')
             <p id="blabla3">Axel chef de projet et plus beau de tout les rebeux</p>
         </div>
 
-        <div class="wrap"></div>
         <div class="clear"></div>
     </section>
     <section id="soutien">
@@ -60,6 +57,7 @@ require('inc/header.php')
         </div>
 
     </section>
+    </div>
     </body>
 
 <?php
