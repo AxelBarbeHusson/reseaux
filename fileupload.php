@@ -187,12 +187,24 @@ if (isLogged()) {
                 $charts = array();
 
 
-                $vi = array_count_values($how);
-                array_push($charts, $vi);
+                $vi= array_count_values($how);
+                array_push($charts,$vi);
 
-                 debug($charts);
+                // debug($charts);
                 $name = array_keys($charts[0]);
-debug($name);
+                $geralt = '';
+                foreach ($name as $value) {
+                    $geralt.= "'" . $value . "',";
+                }
+                
+                echo $geralt;
+                echo '<pre>';
+                $lambert = '';
+
+                foreach ($charts[0] as $nbOfCountry){
+                    $lambert .= $nbOfCountry . ',';
+                }
+                echo $lambert;
 
                 ?>
                 </tbody>
@@ -324,26 +336,18 @@ debug($name);
 
                     // The data for our dataset
                     data: {
-                        <?php
-                        $geralt = '';
-                        foreach ($name as $value) {
-                        $geralt .= '' . $value . ',';
 
-                        ?>
+
                         labels: ["<?=$geralt?>"],
-                        <?php }?>
+
                         datasets: [{
                             label: 'My First dataset',
                             backgroundColor: 'rgb(255, 99, 132)',
                             borderColor: 'rgb(255, 99, 132)',
-                            <?php
-                            $lambert = '';
-                            foreach ($charts[0] as $nbOfCountry){
-                            $lambert .= $nbOfCountry . ',';
 
-                            ?>
+
                             data: [<?=$lambert?>]
-                            <?php }?>
+
                         }]
                     },
 
