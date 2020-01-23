@@ -187,21 +187,21 @@ if (isLogged()) {
                 $charts = array();
 
 
-                $vi= array_count_values($how);
-                array_push($charts,$vi);
+                $vi = array_count_values($how);
+                array_push($charts, $vi);
 
                 // debug($charts);
                 $name = array_keys($charts[0]);
                 $geralt = '';
                 foreach ($name as $value) {
-                    $geralt.= "'" . $value . "',";
+                    $geralt .= "'" . $value . "',";
                 }
-                
+
                 echo $geralt;
                 echo '<pre>';
                 $lambert = '';
 
-                foreach ($charts[0] as $nbOfCountry){
+                foreach ($charts[0] as $nbOfCountry) {
                     $lambert .= $nbOfCountry . ',';
                 }
                 echo $lambert;
@@ -327,7 +327,7 @@ if (isLogged()) {
 
                 });
             </script>
-            <canvas id="myChart" width="400" height="400"></canvas>
+            <canvas id="myChart" width="200" height="200"></canvas>
             <script>
                 var ctx = document.getElementById('myChart');
                 var chart = new Chart(ctx, {
@@ -338,10 +338,10 @@ if (isLogged()) {
                     data: {
 
 
-                        labels: ["<?=$geralt?>"],
+                        labels: [<?=$geralt?>],
 
                         datasets: [{
-                            label: 'My First dataset',
+                            label: 'Nb de connection par pays',
                             backgroundColor: 'rgb(255, 99, 132)',
                             borderColor: 'rgb(255, 99, 132)',
 
