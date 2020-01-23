@@ -420,12 +420,6 @@ thead td {
 }
 
 /*/ Formulaire de contact /*/
-.formulaire2 {
-    padding-top: 150px;
-    font-size: 50px;
-    letter-spacing: 3px;
-    margin-bottom: 50px;
-}
 
 .formulaire2 .error {
     text-align: center;
@@ -439,81 +433,27 @@ thead td {
 }
 .formulaire2 .howto {
 
+    padding-top: 10%;
     text-align: center;
-    font-size: 50px;
+    font-size: 4vw;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #0e0838;
     margin-bottom: 50px;
 }
-
-.backform2 {
-    background-color: #0C0C3C;
-    width: 100%;
-    margin-bottom: 50px;
-    box-shadow: 0px 0px 20px #080825;
-    padding-bottom: 20px;
-}
-
-.backform2 form label {
-    display: block;
-    width: 100%;
-    color: white;
-    text-transform: uppercase;
-    padding-top: 5px;
-    padding-bottom: 10px;
-}
-
-.backform2 input[type=text] {
+.backform textarea {
     padding: 7px 25px;
-    margin-bottom: 10px;
-    font-size: 15px;
+    width: 55%;
+    margin-bottom: 3px;
+    font-size: 1.2vw;
+    border: #0C0C3C 2px solid;
 }
-
-.backform2 input[type=email] {
+.backform input[type=text].subject {
     padding: 7px 25px;
-    margin-bottom: 10px;
-    font-size: 15px;
-}
-
-.backform2 input[type=submit] {
-    display: block;
-    margin: 0 auto;
-    padding: 15px 15px;
-    border-radius: 8px;
-    border: none;
-    background-color: #5FC6DA;
-    margin-bottom: 5px;
-    margin-top: 5px;
-
-}
-
-.backform2 input[type=submit]:hover {
-    transition: 0.5s;
-    background-color: #8CF0FF;
-}
-
-.contenu {
-    padding-top: 80px;
-}
-
-#contact h1 {
-    color: white;
-    position: absolute;
-    margin-top: 90px;
-    margin-left: 200px;
-    font-size: 2.5em;
-}
-
-#contact .contact_us {
-    color: #6DE0F6;
-    border-bottom: solid 2px;
-    border-color: #D1088B
-}
-
-#contact #banniere {
-    width: 100%;
-    height: 250px;
+    width: 45%;
+    margin-bottom: 3px;
+    font-size: 1.2vw;
+    border: #0C0C3C 2px solid;
 }
 
 /*.contenu .error {color:red;margin-top: 5px;}*/
@@ -559,14 +499,7 @@ thead td {
 
 }
 
-.backform2 #submit {
-    display: block;
-    padding: 15px 15px;
-    border-radius: 8px;
-    border: none;
-    background-color: #5FC6DA;
-    margin-bottom: 5px;
-}
+
 .faq {
     font-size: 48px;
     line-height: 55px;
@@ -646,6 +579,7 @@ form {
 
 .backform input[type=text] {
     padding: 7px 25px;
+    width: 35%;
     margin-bottom: 3px;
     font-size: 1.2vw;
     border: #0C0C3C 2px solid;
@@ -653,6 +587,7 @@ form {
 
 .backform input[type=email] {
     padding: 7px 25px;
+    width: 35%;
     margin-bottom: 3px;
     font-size: 1.2vw;
     border: #0C0C3C 2px solid;
@@ -660,6 +595,7 @@ form {
 
 .backform input[type=password] {
     padding: 7px 25px;
+    width: 35%;
     margin-bottom: 3px;
     font-size: 1.2vw;
     border: #0C0C3C 2px solid;
@@ -695,7 +631,10 @@ form {
     transition: 0.5s;
     background-color: #8CF0FF;
 }
-
+.backform .submite:hover {
+    transition: 0.5s;
+    background-color: #8CF0FF;
+}
 .backform .forgot {
     color: #0C0C3C;
     width: 100%;

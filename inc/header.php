@@ -8,7 +8,7 @@
         } else {
             echo '';
         } ?></title>
-    <!--<link rel="stylesheet" href="assets/css/style.css">-->
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet'/>

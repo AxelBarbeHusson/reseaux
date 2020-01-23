@@ -8,8 +8,9 @@ require ('inc/header.php')
 
 
 <body>
-<div id="balise"></div>
+
 <div class="wrap">
+    <div id="balise"></div>
 <section id="presentation_home">
     <div class="home1">
         <h2>Lorem ipsum dolor sit.</h2>

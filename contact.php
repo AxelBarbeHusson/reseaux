@@ -30,68 +30,81 @@ if (!empty($_POST['submitted'])) {
         $query->execute();
         $success = true;
     }
-    $question = clean($_POST['message']);
-    if (count($errors) == 0) {
-        $sql2 = "SELECT contact.message FROM contact";
-        $query = $pdo->prepare($sql2);
+    if (!empty($_POST['message'])) {
+        $usermsg = $_POST['message'];
+        $sql = "SELECT message FROM contact WHERE message = :message";
+        $query = $pdo->prepare($sql);
+        $query->bindValue(':message', $usermsg, PDO::PARAM_INT);
         $query->execute();
-        // request sql pour mettre le message dans la colonne question (pas sur que ça soit correct)
-        $sql3 = "INSERT INTO questions.question VALUES (null, :question , null)";
-        $query->bindValue(':question', $question, PDO::PARAM_STR);
-        $query->execute();
-        $questions = $query->fetchAll();
-        debug($questions);
-        $success = true;
-
-
+        $userinfos = $query->fetch();
+        debug($_POST['message']);
+        if (!empty($_SESSION['login']['id'])) {
+            $userid = $_SESSION['login']['id'];
+            $sql = "SELECT id FROM users WHERE id = :id";
+            $query = $pdo->prepare($sql);
+            $query->bindValue(':id', $userid, PDO::PARAM_INT);
+            $query->execute();
+            $userinfos = $query->fetch();
+            debug($_SESSION['login']['id']);
+            if (count($errors) == 0) {
+                $sql = "INSERT INTO questions VALUES (null,:id_user,:question,'')";
+                $query = $pdo->prepare($sql);
+                $query->bindValue(':id_user',$_SESSION['login']['id'],  PDO::PARAM_STR);
+                $query->bindValue(':question', $message, PDO::PARAM_STR);
+                $query->execute();
+                $success = true;
+            }
+        }
     }
+
 }
 include('inc/header.php'); ?>
     <div id="balise"></div>
-    <div class="contenu">
-        <div class="wrap2">
+
+        <div class="wrap">
+            <div class="contenu">
             <div class="formulaire2">
                 <?php if ($success) { ?>
                     <p class="success">Merci de nous avoir contacté, nous vous renverrons un mail dans les plus
                         brefs délais</p>
                 <?php } else  { ?>
                 <p class="howto">Contactez nous !</p>
-                <div class="backform2">
+                <div class="backform">
                     <form action="contact.php" method="post" novalidate>
-                        <label for="nom"></label>
+                        <label for="nom">Nom *</label>
                         <input type="text" id="nom" name="nom" value="<?php if (!empty($_POST)) {
                             echo $_POST['nom'];
-                        } ?>" placeholder="Votre Nom">
+                        } ?>" >
                         <p class="error"><?php if (!empty($errors['nom'])) {
                                 echo $errors['nom'];
                             } ?></p>
-                        <label for="prenom"></label>
+                        <label for="prenom">Prénom *</label>
                         <input type="text" id="prenom" name="prenom" value="<?php if (!empty($_POST)) {
                             echo $_POST['prenom'];
-                        } ?>" placeholder="Votre Prénom">
+                        } ?>">
                         <p class="error"><?php if (!empty($errors['prenom'])) {
                                 echo $errors['prenom'];
                             } ?></p>
-                        <label for="email"></label>
+                        <label for="email">Email *</label>
                         <input type="email" id="email" name="email" value="<?php if (!empty($_POST)) {
                             echo $_POST['email'];
-                        } ?>" placeholder="Votre Mail">
+                        } ?>">
                         <p class="error"><?php if (!empty($errors['email'])) {
                                 echo $errors['email'];
                             } ?></p>
-                        <label for="subject"></label>
-                        <input type="text" id="subject" name="subject" value="<?php if (!empty($_POST)) {
+                        <label for="subject">Sujet *</label>
+                        <input class="subject" type="text" id="subject" name="subject" value="<?php if (!empty($_POST)) {
                             echo $_POST['subject'];
-                        } ?>" placeholder="Objet de votre message">
+                        } ?>">
                         <p class="error"><?php if (!empty($errors['subject'])) {
                                 echo $errors['subject'];
                             } ?></p>
-                        <label for="message"></label>
+                        <label for="message">Question *</label>
                         <textarea name="message" id="message" cols="30" rows="10"></textarea>
                         <p class="error"><?php if (!empty($errors['message'])) {
                                 echo $errors['message'];
                             } ?></p>
-                        <input id="submit" type="submit" name="submitted" value="Envoyer">
+                        <input id="submit" type="submit" name="submitted" value="Envoyer" class="submite">
                     </form>
                 </div>
             </div>
@@ -135,6 +148,11 @@ include('inc/header.php'); ?>
                         malesuada
                         fames ac
                         turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
+                </div>
+                <button class="accordion"><span class="num">6 - </span>Nulla ipsum dolor lacus, suscipit adipiscing?
+                </button>
+                <div class="panel">
+                    <p></p>
                 </div>
             </div>
         </div>
