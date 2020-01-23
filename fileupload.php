@@ -197,14 +197,14 @@ if (isLogged()) {
                     $geralt .= "'" . $value . "',";
                 }
 
-                echo $geralt;
+                //echo $geralt;
                 echo '<pre>';
                 $lambert = '';
 
                 foreach ($charts[0] as $nbOfCountry) {
                     $lambert .= $nbOfCountry . ',';
                 }
-                echo $lambert;
+                //echo $lambert;
 
                 ?>
                 </tbody>
