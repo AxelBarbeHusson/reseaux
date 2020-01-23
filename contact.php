@@ -49,13 +49,6 @@ if (!empty($_POST['submitted'])) {
 include('inc/header.php'); ?>
     <div id="balise"></div>
     <div class="contenu">
-        <div id="contact">
-            <h1>
-                Vous avez <span class="contact_us">une question ?</span>
-            </h1>
-            <img id="banniere" src="assets/img/Bannieretest.PNG" alt="">
-        </div>
-        <div class="clear"></div>
         <div class="wrap2">
             <div class="formulaire2">
                 <?php if ($success) { ?>
