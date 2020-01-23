@@ -13,20 +13,37 @@ if (!empty($_POST['submitted'])) {
     $email = clean($_POST['email']);
     $errors = emailValidation($errors, $email, 'email');
     $subject = clean($_POST['subject']);
+    $message = clean($_POST['message']);
     $errors = textWalid($errors, $subject, 'subject', 5, 30);
     $message = clean($_POST['message']);
     $errors = textWalid($errors, $message, 'message', 5, 2000);
     if (count($errors) == 0) {
         // insert avec protection des injections SQL
+        // requète sql pour le formulaire de contact
         $sql = "INSERT INTO contact VALUES (null,:nom,:prenom,:email,:subject,:message)";
         $query = $pdo->prepare($sql);
         $query->bindValue(':nom', $nom, PDO::PARAM_STR);
-        $query->bindValue(':prenom', $nom, PDO::PARAM_STR);
+        $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
         $query->bindValue(':email', $email, PDO::PARAM_STR);
         $query->bindValue(':subject', $subject, PDO::PARAM_STR);
         $query->bindValue(':message', $message, PDO::PARAM_STR);
         $query->execute();
         $success = true;
+    }
+    $question = clean($_POST['message']);
+    if (count($errors) == 0) {
+        $sql2 = "SELECT contact.message FROM contact";
+        $query = $pdo->prepare($sql2);
+        $query->execute();
+        // request sql pour mettre le message dans la colonne question
+        $sql3 = "INSERT INTO questions.question VALUES (null, :question , null)";
+        $query->bindValue(':question', $question, PDO::PARAM_STR);
+        $query->execute();
+        $questions = $query->fetchAll();
+        debug($questions);
+        $success = true;
+
+
     }
 }
 include('inc/header.php'); ?>
@@ -123,12 +140,19 @@ include('inc/header.php'); ?>
         </div>
     </div>
 <?php
-if (isSubbed()) { ?>
+if (isSubbed() or idAdmin()) { ?>
     <div class="sub_questions">
-        <h3 class="titre_sub"> Nous répondons à vos questions !</h3>
-        <?php
-
-        ?>
+    <h3 class="titre_sub"> Nous répondons à vos questions !</h3>
+    <form action="contact.php" method="post" novalidate>
+    <label for="question"></label>
+    <input type="text" id="question" name="question" value="<?php if(!empty($_POST)) {echo $_POST['question'];} ?>">
+    <?php } ?>
+<?php if (idAdmin()) { ?>
+    <label for="response"></label>
+    <input type="text" id="response" name="add_resp">
+    <input id="button_sub" type="submit" name="button_sub" value="OK">
+    </form>
     </div>
-<?php } ?>
-<? include_once('inc/footer.php');
+    <?php
+} ?>
+<?php include_once('inc/footer.php');
