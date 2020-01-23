@@ -16,5 +16,5 @@ if (isLogged()) {
     </form>
 </div>
     <?php
-}echo '<p class="err">403</p>';
+}else {echo '<p class="err">403</p>';};
 require ('inc/footer.php');
