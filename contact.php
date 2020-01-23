@@ -35,7 +35,7 @@ if (!empty($_POST['submitted'])) {
         $sql2 = "SELECT contact.message FROM contact";
         $query = $pdo->prepare($sql2);
         $query->execute();
-        // request sql pour mettre le message dans la colonne question
+        // request sql pour mettre le message dans la colonne question (pas sur que ça soit correct)
         $sql3 = "INSERT INTO questions.question VALUES (null, :question , null)";
         $query->bindValue(':question', $question, PDO::PARAM_STR);
         $query->execute();
