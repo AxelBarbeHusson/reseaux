@@ -13,7 +13,7 @@ require ('inc/header.php')
     <div id="balise"></div>
 <section id="presentation_home">
     <div class="home1">
-        <h2>Analysé vos trames réseaux.</h2>
+        <h2>Analysez vos trames réseaux.</h2>
         <br>
         <p>Découvrez nos différentes offres.</p>
         <br>
