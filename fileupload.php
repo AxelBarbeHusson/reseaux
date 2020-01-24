@@ -28,7 +28,7 @@ if (isLogged()) {
 
             ?>
 
-
+<div class="wrap2">
             <table>
                 <thead>
                 <tr>
@@ -122,8 +122,8 @@ if (isLogged()) {
                         }
 
                     } else {
-                        echo '<td>-</td>';
-                        echo '<td>-</td>';
+                        echo '<td>x</td>';
+                        echo '<td>x</td>';
                     }
                     if (isset($row['eth'])) {
                         echo '<td>' . $json[$i]['_source']['layers']['eth']['eth.src'] . '</td>';
@@ -135,7 +135,7 @@ if (isLogged()) {
                         echo '<td>' . $json[$i]['_source']['layers']['ssdp']['http.host'] . '</td>';
 
                     } else {
-                        echo '<td>-</td>';
+                        echo '<td>x</td>';
                     }
 
                     if (isset($row['udp'])) {
@@ -143,14 +143,14 @@ if (isLogged()) {
                         echo '<td>' . $json[$i]['_source']['layers']['udp']['udp.srcport'] . '</td>';
                         echo '<td>' . $json[$i]['_source']['layers']['udp']['udp.dstport'] . '</td>';
                     } else {
-                        echo '<td>-</td>';
+                        echo '<td>x</td>';
                     }
                     if (isset($row['tcp'])) {
                         //echo '<td>TCP</td>';
                         echo '<td>' . $json[$i]['_source']['layers']['tcp']['tcp.srcport'] . '</td>';
                         echo '<td>' . $json[$i]['_source']['layers']['tcp']['tcp.dstport'] . '</td>';
                     } else {
-                        echo '<td>-</td>';
+                        echo '<td>x</td>';
                     }
 
                     echo '</tr>';
@@ -182,7 +182,7 @@ if (isLogged()) {
                 }
                 //debug($tapindesbois);
                 //array_count_values($how);
-
+if (idAdmin() || isSubbed()){
                 //debug($how);
                 $charts = array();
 
@@ -209,9 +209,11 @@ if (isLogged()) {
                 ?>
                 </tbody>
             </table>
-
+</div>
+<div class="wrap2">
 
             <div id='map' style='width: 400px; height: 300px;'></div>
+</div>
             <script>
                 mapboxgl.accessToken = 'pk.eyJ1IjoiYXhlbGJhcmJlaHVzc29uIiwiYSI6ImNrNWZlNWE5cTJrMDczbXBnOGI4NTk2MTMifQ.5l3FgdaFC4KAGnfabyT6Kw';
                 var map = new mapboxgl.Map({
@@ -327,7 +329,9 @@ if (isLogged()) {
 
                 });
             </script>
-            <canvas id="myChart" width="200" height="200"></canvas>
+            <div class="wrap2">
+            <canvas id="myChart" ></canvas>
+            </div>
             <script>
                 var ctx = document.getElementById('myChart');
                 var chart = new Chart(ctx, {
@@ -358,7 +362,7 @@ if (isLogged()) {
             </script>
 
             <?php
-
+        }
 
         } else {
             echo "Le fichier n'a pas été uploadé (trop gros ?) ou " .
