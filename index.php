@@ -13,9 +13,9 @@ require ('inc/header.php')
     <div id="balise"></div>
 <section id="presentation_home">
     <div class="home1">
-        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Analysé vos trames réseaux.</h2>
         <br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, similique?</p>
+        <p>Découvrez nos différentes offres.</p>
         <br>
     </div>
     <div class="home2">
@@ -35,13 +35,13 @@ require ('inc/header.php')
         <img src="assets/img/guarantee.svg" >
 
         <h3>Garanti</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi odit officia repudiandae tempora voluptatum?</p>
+        <p>Une véracité des résultats garantis.</p>
     </div>
 
     <div class="element_2">
         <img src="assets/img/password.svg">
         <h3>Sécurisé</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi odit officia repudiandae tempora voluptatum?</p>
+        <p>Une analyse 100% sécurisée.</p>
     </div>
 
 </section>
@@ -54,11 +54,11 @@ require ('inc/header.php')
     <a href="services.php">
         <div class="text2">
         <h3>Service gratuit</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorem exercitationem iure laboriosam minima, neque reiciendis vitae. Eligendi, esse, maxime.</p>
+        <p>Avec notre offre gratuite vous pouvez :</p>
         <ul>
-            <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
-            <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
-            <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
+            <li><i class='fas fa-caret-right'></i>voir les questions / réponses les plus posées.</li>
+            <li><i class='fas fa-caret-right'></i>Analyser des trames sous format .json</li>
+            <li><i class='fas fa-caret-right'></i>Pouvoir nous posé une question avec le formulaire de contact . </li>
         </ul>
         </div>
         <img class="imgfree" src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-home-image-11.png">
@@ -66,11 +66,11 @@ require ('inc/header.php')
         <a href="login.php">
             <div class="text2">
                 <h3>Service gratuit</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorem exercitationem iure laboriosam minima, neque reiciendis vitae. Eligendi, esse, maxime.</p>
+                <p>Avec notre offre gratuite vous pouvez :</p>
                 <ul>
-                    <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
-                    <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
-                    <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
+                    <li><i class='fas fa-caret-right'></i>voir les questions / réponses les plus posées.</li>
+                    <li><i class='fas fa-caret-right'></i>Analyser des trames sous format .json</li>
+                    <li><i class='fas fa-caret-right'></i>Pouvoir nous posé une question avec le formulaire de contact . </li>
                 </ul>
             </div>
             <img class="imgfree" src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-home-image-11.png">
@@ -82,11 +82,11 @@ require ('inc/header.php')
         <a href="services.php">
         <div class="text3">
         <h3>Service payant</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorem exercitationem iure laboriosam minima, neque reiciendis vitae. Eligendi, esse, maxime.</p>
+        <p>Avec notre offre payante vous pouvez :</p>
         <ul>
-            <li><i class='fas fa-caret-right'></i>Lorem dolor.</li>
-            <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
-            <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
+            <li><i class='fas fa-caret-right'></i>Vous avez toutes les options du compte gratuit</li>
+            <li><i class='fas fa-caret-right'></i>Chart.js</li>
+            <li><i class='fas fa-caret-right'></i>Option Maps permet de voir ou son envoyé les données.</li>
         </ul>
         </div>
         <img class="imgsub" src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-home-image-22.png">
@@ -95,11 +95,11 @@ require ('inc/header.php')
     <a href="login.php">
         <div class="text3">
             <h3>Service payant</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorem exercitationem iure laboriosam minima, neque reiciendis vitae. Eligendi, esse, maxime.</p>
+            <pAvec notre offre payante vous pouvez :</p>
             <ul>
-                <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
-                <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
-                <li><i class='fas fa-caret-right'></i>Lorem ipsum dolor.</li>
+                <li><i class='fas fa-caret-right'></i>Vous avez toutes les options du compte gratuit</li>
+                <li><i class='fas fa-caret-right'></i>Chart.js</li>
+                <li><i class='fas fa-caret-right'></i>Option Maps permet de voir ou son envoyé les données.</li>
             </ul>
         </div>
         <img class="imgsub" src="http://be.beantownthemes.com/html/content/hosting3/images/hosting3-home-image-22.png">
