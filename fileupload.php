@@ -122,8 +122,8 @@ if (isLogged()) {
                         }
 
                     } else {
-                        echo '<td>-</td>';
-                        echo '<td>-</td>';
+                        echo '<td>x</td>';
+                        echo '<td>x</td>';
                     }
                     if (isset($row['eth'])) {
                         echo '<td>' . $json[$i]['_source']['layers']['eth']['eth.src'] . '</td>';
@@ -135,7 +135,7 @@ if (isLogged()) {
                         echo '<td>' . $json[$i]['_source']['layers']['ssdp']['http.host'] . '</td>';
 
                     } else {
-                        echo '<td>-</td>';
+                        echo '<td>x</td>';
                     }
 
                     if (isset($row['udp'])) {
@@ -143,14 +143,14 @@ if (isLogged()) {
                         echo '<td>' . $json[$i]['_source']['layers']['udp']['udp.srcport'] . '</td>';
                         echo '<td>' . $json[$i]['_source']['layers']['udp']['udp.dstport'] . '</td>';
                     } else {
-                        echo '<td>-</td>';
+                        echo '<td>x</td>';
                     }
                     if (isset($row['tcp'])) {
                         //echo '<td>TCP</td>';
                         echo '<td>' . $json[$i]['_source']['layers']['tcp']['tcp.srcport'] . '</td>';
                         echo '<td>' . $json[$i]['_source']['layers']['tcp']['tcp.dstport'] . '</td>';
                     } else {
-                        echo '<td>-</td>';
+                        echo '<td>x</td>';
                     }
 
                     echo '</tr>';
