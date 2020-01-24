@@ -47,7 +47,7 @@ if (!empty($_POST['submitted'])) {
             if (count($errors) == 0) {
                 $sql = "INSERT INTO questions VALUES (null,:id_user,:question,'')";
                 $query = $pdo->prepare($sql);
-                $query->bindValue(':id_user',$_SESSION['login']['id'],  PDO::PARAM_STR);
+                $query->bindValue(':id_user', $_SESSION['login']['id'], PDO::PARAM_STR);
                 $query->bindValue(':question', $message, PDO::PARAM_STR);
                 $query->execute();
                 $success = true;
@@ -59,8 +59,8 @@ if (!empty($_POST['submitted'])) {
 include('inc/header.php'); ?>
     <div id="balise"></div>
 
-        <div class="wrap">
-            <div class="contenu">
+    <div class="wrap">
+        <div class="contenu">
             <div class="formulaire2">
                 <?php if ($success) { ?>
                     <p class="success">Merci de nous avoir contacté, nous vous renverrons un mail dans les plus
@@ -72,7 +72,7 @@ include('inc/header.php'); ?>
                         <label for="nom">Nom *</label>
                         <input type="text" id="nom" name="nom" value="<?php if (!empty($_POST)) {
                             echo $_POST['nom'];
-                        } ?>" >
+                        } ?>">
                         <p class="error"><?php if (!empty($errors['nom'])) {
                                 echo $errors['nom'];
                             } ?></p>
@@ -91,9 +91,10 @@ include('inc/header.php'); ?>
                                 echo $errors['email'];
                             } ?></p>
                         <label for="subject">Sujet *</label>
-                        <input class="subject" type="text" id="subject" name="subject" value="<?php if (!empty($_POST)) {
-                            echo $_POST['subject'];
-                        } ?>">
+                        <input class="subject" type="text" id="subject" name="subject"
+                               value="<?php if (!empty($_POST)) {
+                                   echo $_POST['subject'];
+                               } ?>">
                         <p class="error"><?php if (!empty($errors['subject'])) {
                                 echo $errors['subject'];
                             } ?></p>
@@ -109,64 +110,66 @@ include('inc/header.php'); ?>
             <?php } ?>
             <div id="accordion">
                 <p class="faq">Foire aux questions</p>
-                <button class="accordion"><span class="num">1 - </span>Lorem ipsum dolor sit amet?</button>
+                <button class="accordion"><span class="num">1 - </span>Puis-je envoyer mon analyse réseau si je ne suis
+                    pas abonné?
+                </button>
                 <div class="panel">
-                    <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-                        ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-                        amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-                        odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                    <p>Oui vous pouvez nous envoyer votre analyse réseau gratuitement et vous assurer une réponse dans
+                        les meilleurs délais. Cependant votre réponse sera sous forme de tableau simple sans plus de
+                        détails, au contraire de notre rôle abonné qui lui aura une vue plus détaillées avec notamment
+                        une analyse directe sur notre site ne nécessitant aucun logiciel</p>
                 </div>
 
-                <button class="accordion"><span class="num">2 - </span>Donec vestibulum justo a diam?</button>
-                <div class="panel">
-                    <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
-                        malesuada
-                        fames ac
-                        turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
-                </div>
-                <button class="accordion"><span class="num">3 - </span>Quisque lorem tortor fringilla sed?</button>
-                <div class="panel">
-                    <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
-                        malesuada
-                        fames ac
-                        turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
-                </div>
-                <button class="accordion"><span class="num">4 - </span>Vestibulum dapibus, mauris nec malesuada?
+                <button class="accordion"><span class="num">2 - </span>Mon analyse réseau n'a pas le bon format que
+                    dois-je faire?
                 </button>
                 <div class="panel">
-                    <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
-                        malesuada
-                        fames ac
-                        turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
+                    <p>Afin d'analyser au mieux votre analyse réseau notre équipe a besoin d'un fichier comprenant
+                        l'extension JSON générée par le logiciel WireShark ou encore TShark. Si vous êtes abonné vous
+                        pouvez directement analyser votre réseau via notre site et cela en direct.</p>
                 </div>
-                <button class="accordion"><span class="num">5 - </span>Nulla ipsum dolor lacus, suscipit adipiscing?
+                <button class="accordion"><span class="num">3 - </span>Que m'apporte réellement le rôle abonné?</button>
+                <div class="panel">
+                    <p>En plus d'une utilisation de notre propre analyseur de réseau, le rôle abonné vous permet
+                        d'accéder à un formulaire de contact plus personnalisé. Notre équipe prendra le soin de répondre
+                        au mieux à vos questions et cela instantanément, de plus votre analyse réseau contiendra
+                        notamment des graphiques expliquant en détails l'analyse.
+                    </p>
+                </div>
+                <button class="accordion"><span class="num">4 - </span>Est-ce réellement sécurisé ?
                 </button>
                 <div class="panel">
-                    <p>Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
-                        malesuada
-                        fames ac
-                        turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
+                    <p>Oui notre système est 100% sécurisé avec une protection 24/24h de vos données personnelles sur
+                        nos sites. Les informations de paiements ne sont pas stockées dans notre base de données afin de
+                        vous permettre une sécurité en plus.</p>
+                </div>
+                <button class="accordion"><span class="num">5 - </span>Comment procéder a l'annulation de mon rôle?
+                </button>
+                <div class="panel">
+                    <p>Une fois que vous avez souscris à notre rôle dit "abonné" vous receverez un email confirmant
+                        votre souscription. Sur ce mail vous aurez la possiblité d'accéder à votre compte. Vous pourrez
+                        vous désinscrire une fois le mois passé et seulement après. La souscription vous engage sur un
+                        mois, vous n'aurez donc pas la possibilté de vous désinscrire pendant ce mois.</p>
                 </div>
                 <?php
                 $number = 5;
                 $sql = "SELECT * FROM questions";
                 $resultat = $pdo->query($sql);
                 $ligne = $resultat->fetch();
-                    if(!empty($_SESSION['login']['id'])) {
-                        if (!empty($ligne['question'])) {
-                            if (!empty($ligne['reponse'])) {
-                                foreach ($ligne as $ligne['id_user']) {
-                                                    $number++;
-                                    echo '
-                <button class="accordion"><span class="num">'. $number .' - </span>' . $ligne['question'] . '</button>
+                if (!empty($_SESSION['login']['id'])) {
+                    if (!empty($ligne['question'])) {
+                        if (!empty($ligne['reponse'])) {
+                            foreach ($ligne as $ligne['id_user']) {
+                                $number++;
+                                echo '
+                <button class="accordion"><span class="num">' . $number . ' - </span>' . $ligne['question'] . '</button>
                 <div class="panel">
                     <p>' . $ligne['reponse'] . '</p>
                 </div>';
-                                }
                             }
                         }
                     }
-                    ; ?>
+                }; ?>
 
 
             </div>
