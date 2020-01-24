@@ -37,7 +37,6 @@ if (!empty($_POST['submitted'])) {
         $query->bindValue(':message', $usermsg, PDO::PARAM_INT);
         $query->execute();
         $userinfos = $query->fetch();
-        debug($_POST['message']);
         if (!empty($_SESSION['login']['id'])) {
             $userid = $_SESSION['login']['id'];
             $sql = "SELECT id FROM users WHERE id = :id";
@@ -45,7 +44,6 @@ if (!empty($_POST['submitted'])) {
             $query->bindValue(':id', $userid, PDO::PARAM_INT);
             $query->execute();
             $userinfos = $query->fetch();
-            debug($_SESSION['login']['id']);
             if (count($errors) == 0) {
                 $sql = "INSERT INTO questions VALUES (null,:id_user,:question,'')";
                 $query = $pdo->prepare($sql);
@@ -149,28 +147,29 @@ include('inc/header.php'); ?>
                         fames ac
                         turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
                 </div>
-                <button class="accordion"><span class="num">6 - </span>Nulla ipsum dolor lacus, suscipit adipiscing?
-                </button>
+                <?php
+                $sql = "SELECT * FROM questions";
+                $resultat = $pdo->query($sql);
+                $ligne = $resultat->fetch();
+                    if(!empty($_SESSION['login']['id'])) {
+                        if (!empty($ligne['question'])) {
+                            if (!empty($ligne['reponse'])) {
+                                foreach ($ligne as $ligne['id_user']) {
+
+                                    echo '
+                <button class="accordion"><span class="num">6</span>' . $ligne['question'] . '</button>
                 <div class="panel">
-                    <p></p>
-                </div>
+                    <p>' . $ligne['reponse'] . '</p>
+                </div>';
+                                }
+                            }
+                        }
+                    }
+                    ; ?>
+
+
             </div>
         </div>
     </div>
-<?php
-if (isSubbed() or idAdmin()) { ?>
-    <div class="sub_questions">
-    <h3 class="titre_sub"> Nous répondons à vos questions !</h3>
-    <form action="contact.php" method="post" novalidate>
-    <label for="question"></label>
-    <input type="text" id="question" name="question" value="<?php if(!empty($_POST)) {echo $_POST['question'];} ?>">
-    <?php } ?>
-<?php if (idAdmin()) { ?>
-    <label for="response"></label>
-    <input type="text" id="response" name="add_resp">
-    <input id="button_sub" type="submit" name="button_sub" value="OK">
-    </form>
-    </div>
-    <?php
-} ?>
+
 <?php include_once('inc/footer.php');
