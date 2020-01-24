@@ -35,6 +35,10 @@
                 <li><a href="services.php" class="item">Services</a></li>
                 <li id="Slash"><a>| |</a></li>
                 <li><a href="contact.php" class="item">Contact</a></li>
+                <li id="Slash"><a>| |</a></li>
+                <li><a href="mentions.html" class="item">Mentions légales</a></li>
+                <li id="Slash"><a>| |</a></li>
+                <li><a href="cgu.html" class="item">CGU</a></li>
             </ul>
         <p class="Copyright">Copyright 2020 Wire & Network. Tous droits réservés.</p>
     </div>
