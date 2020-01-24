@@ -39,7 +39,7 @@ include('inc/header.php'); ?>
                     echo $errors['email'];
                 } ?></p>
 
-            <input type="submit" name="submitted" value="Modifier mon mot de passe">
+            <input type="submit" name="submitted" value="Modifier votre mot de passe">
         </form>
         <div class="clear"></div>
     </div>
