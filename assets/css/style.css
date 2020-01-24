@@ -743,3 +743,29 @@ footer h4 {
 i.material-icons {
     color: #FFF;
 }
+#myChart{
+    width: 100px;
+    height: 100px;
+}
+table {
+    margin-top: 10%;
+
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #0C0C3C;
+    color: white;
+}
+.map{
+    width: 100%;
+    margin: 0 auto;
+}

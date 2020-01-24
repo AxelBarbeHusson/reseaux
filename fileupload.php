@@ -28,7 +28,7 @@ if (isLogged()) {
 
             ?>
 
-
+<div class="wrap2">
             <table>
                 <thead>
                 <tr>
@@ -182,7 +182,7 @@ if (isLogged()) {
                 }
                 //debug($tapindesbois);
                 //array_count_values($how);
-
+if (idAdmin() || isSubbed()){
                 //debug($how);
                 $charts = array();
 
@@ -209,9 +209,11 @@ if (isLogged()) {
                 ?>
                 </tbody>
             </table>
-
+</div>
+<div class="wrap2">
 
             <div id='map' style='width: 400px; height: 300px;'></div>
+</div>
             <script>
                 mapboxgl.accessToken = 'pk.eyJ1IjoiYXhlbGJhcmJlaHVzc29uIiwiYSI6ImNrNWZlNWE5cTJrMDczbXBnOGI4NTk2MTMifQ.5l3FgdaFC4KAGnfabyT6Kw';
                 var map = new mapboxgl.Map({
@@ -327,7 +329,9 @@ if (isLogged()) {
 
                 });
             </script>
-            <canvas id="myChart" width="200" height="200"></canvas>
+            <div class="wrap2">
+            <canvas id="myChart" ></canvas>
+            </div>
             <script>
                 var ctx = document.getElementById('myChart');
                 var chart = new Chart(ctx, {
@@ -358,7 +362,7 @@ if (isLogged()) {
             </script>
 
             <?php
-
+        }
 
         } else {
             echo "Le fichier n'a pas été uploadé (trop gros ?) ou " .
