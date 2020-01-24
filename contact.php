@@ -148,6 +148,7 @@ include('inc/header.php'); ?>
                         turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Etiam ullamcorper.</p>
                 </div>
                 <?php
+                $number = 5;
                 $sql = "SELECT * FROM questions";
                 $resultat = $pdo->query($sql);
                 $ligne = $resultat->fetch();
@@ -155,9 +156,9 @@ include('inc/header.php'); ?>
                         if (!empty($ligne['question'])) {
                             if (!empty($ligne['reponse'])) {
                                 foreach ($ligne as $ligne['id_user']) {
-
+                                                    $number++;
                                     echo '
-                <button class="accordion"><span class="num">6</span>' . $ligne['question'] . '</button>
+                <button class="accordion"><span class="num">'. $number .' - </span>' . $ligne['question'] . '</button>
                 <div class="panel">
                     <p>' . $ligne['reponse'] . '</p>
                 </div>';

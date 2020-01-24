@@ -42,7 +42,7 @@
 
             <?php } else { ?>
                 <li><a href="logout.php" >Deconnexion</a></li>
-                <li><a href="quisommesnous.php" >Qui sommes nous ?</a></li>
+                <li><a href="quisommesnous.php" class="who">Qui sommes nous ?</a></li>
                 <li><a href="services.php" >Services</a></li>
                 <li ><a href="contact.php" >Contact</a></li>
             <?php } ?>

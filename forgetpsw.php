@@ -21,14 +21,14 @@ if (!empty($_POST['submitted'])){
         $html = '<a href="modifpsw.php?email=' . $email . '&token=' . $token . '">C\'est ici</a>';
         echo $html;
     } else {
-        $errors['email'] = 'Prends moi pour un con';
+        $errors['email'] = 'Rentrez votre email correctement;
     }
 }
 
 include('inc/header.php'); ?>
     <div class="wrap">
         <div class="clear"></div>
-        <h1> Mot de passe oublié </h1>
+        <h1 class="wpforget"> Mot de passe oublié </h1>
 
         <form class="inscri" action="" method="post">
             <label for="email">E-mail : </label>

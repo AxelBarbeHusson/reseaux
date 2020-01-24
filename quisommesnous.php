@@ -13,18 +13,8 @@ require('inc/header.php')
         <h2 class="qui">Qui sommes nous ?</h2>
         <div class="bar"></div>
         <div class="gauche">
-            <h3 id="titreblabla">Des jeunes développeurs expérimentés</h3>
-            <p id="blabla1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias, aspernatur
-                atque culpa
-                deserunt distinctio dolor eligendi, ipsam itaque libero omnis pariatur perferendis porro sapiente sit
-                voluptas?
-                Ipsum, minus.lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore ea et ex
-                illo ipsam laudantium, maxime quasi quo quod suscipit tempora temporibus. Aut error esse, illo placeat
-                quo voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet assumenda beatae commodi
-                dignissimos eum eveniet, exercitationem inventore ipsum laboriosam maxime pariatur possimus quae quod
-                reprehenderit similique, tempore unde voluptate! Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Amet assumenda id ipsam, maxime nemo recusandae sequi. Asperiores, cupiditate debitis deleniti
-                doloribus enim, hic laboriosam nostrum rem, sunt ullam velit vero!</p>
+            <h3 id="titreblabla">Des jeunes développeurs</h3>
+            <p id="blabla1">Etudiants à la Nfactory school, nous avons eu pour projet d'analyser un fichier json contenant les informations du réseau wifi de notre campus. Nous possedons tous un rôle au sein de ce groupe. Certains plutôt back, certains plutôt front. En collaboration avec la NFactory corp. , nous avons pu mener à bien ce projet en ayant un upload de fichier et une analyse fonctionnelle</p>
 
         </div>
         <img id="rj45" src="assets/img/RJ45.png" alt="image cable">
@@ -45,7 +35,7 @@ require('inc/header.php')
         <img id="serv" src="assets/img/Serveur.jpeg" alt="">
         <div id="float">
             <img id="axel" src="assets/img/axel.jfif" alt="">
-            <p id="blabla3">Axel chef de projet et plus beau de tout les rebeux</p>
+            <p id="blabla3">Axel chef de projet</p>
         </div>
 
         <div class="clear"></div>
