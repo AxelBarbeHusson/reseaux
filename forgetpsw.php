@@ -21,7 +21,7 @@ if (!empty($_POST['submitted'])){
         $html = '<a href="modifpsw.php?email=' . $email . '&token=' . $token . '">C\'est ici</a>';
         echo $html;
     } else {
-        $errors['email'] = 'Rentrez votre email correctement;
+        $errors['email'] = 'Rentrez votre email correctement';
     }
 }
 
