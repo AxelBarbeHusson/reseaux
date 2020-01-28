@@ -34,7 +34,7 @@ require('inc/header.php')
     <section id="groupe2">
         <img id="serv" src="assets/img/Serveur.jpeg" alt="">
         <div id="float">
-            <img id="axel" src="assets/img/axel.jfif" alt="">
+            <img id="axel" src="assets/img/axel.jfif" alt="" />
             <p id="blabla3">Axel chef de projet</p>
         </div>
 

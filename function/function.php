@@ -10,6 +10,7 @@ function debug($tableau)
 function clean($string)
 {
     return trim(strip_tags($string));
+    //url encode
 }
 
 

@@ -9,6 +9,7 @@ if (isLogged()) {
     $nomOrigine = $_FILES['monfichier']['name'];
     $elementsChemin = pathinfo($nomOrigine);
     $extensionFichier = $elementsChemin['extension'];
+    //check type mime
     $extensionsAutorisees = array("json");
     if (!(in_array($extensionFichier, $extensionsAutorisees))) {
         echo "Le fichier n'a pas l'extension attendue";
@@ -52,7 +53,7 @@ if (isLogged()) {
                     echo '<tr>';
                     $row = $json[$i]['_source']['layers'];
                     if (isset($row['frame'])) {
-                        echo '<td>' . $json[$i]['_source']['layers']['frame']['frame.time'] . '</td>';
+                        echo '<td>' . $row['frame']['frame.time'] . '</td>';
                     }
                     if (isset($row['ip'])) {
                         echo '<td>' . $json[$i]['_source']['layers']['ip']['ip.src'] . '</td>';
